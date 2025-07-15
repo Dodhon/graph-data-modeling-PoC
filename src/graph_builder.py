@@ -1,17 +1,19 @@
 """
 Knowledge Graph Builder for E80 Manual Processing
-Combines LangChain's LLMGraphTransformer with AutoSchemaKG-inspired schema induction
+Uses Entity-Event-Concept extraction for troubleshooting-optimized knowledge graphs
 """
 
 from typing import List, Dict, Any, Optional
 import os
 import time
 from langchain.schema import Document
-from langchain_experimental.graph_transformers import LLMGraphTransformer
 from langchain_anthropic import ChatAnthropic
 from langchain_community.graphs import Neo4jGraph
 import re
 import json
+from .eec_graph_transformer import EECGraphTransformer, EECGraphDocument
+from .temporal_extractor import TemporalExtractor
+from .schema_inducer import SchemaInducer
 
 
 class ManualGraphBuilder:
@@ -26,12 +28,14 @@ class ManualGraphBuilder:
             max_tokens=8192
         )
         
-        # Initialize graph transformer for open discovery (no constraints)
-        self.graph_transformer = LLMGraphTransformer(
-            llm=self.llm,
-            node_properties=True,  # Enable autonomous property extraction
-            relationship_properties=True  # Enable relationship property extraction
-        )
+        # Initialize EEC graph transformer for troubleshooting-optimized extraction
+        self.eec_transformer = EECGraphTransformer(llm=self.llm)
+        
+        # Initialize temporal extractor for sequence and causal analysis
+        self.temporal_extractor = TemporalExtractor(llm=self.llm)
+        
+        # Initialize schema inducer for hierarchical organization
+        self.schema_inducer = SchemaInducer(llm=self.llm)
         
         # Initialize Neo4j if credentials provided
         self.graph_db = None
@@ -65,28 +69,28 @@ class ManualGraphBuilder:
         text = re.sub(r'\s+', ' ', text)
         return text.strip()
     
-    def extract_graph_from_chunks(self, chunks: List[str], save_every: int = 100) -> List[Any]:
-        """Extract graph documents from text chunks with periodic saving"""
-        all_graph_docs = []
+    def extract_graph_from_chunks(self, chunks: List[str], save_every: int = 100) -> List[EECGraphDocument]:
+        """Extract EEC graph documents from text chunks with periodic saving"""
+        all_eec_docs = []
         
         for i, chunk in enumerate(chunks):
             print(f"Processing chunk {i+1}/{len(chunks)}")
             try:
-                documents = [Document(page_content=chunk, metadata={"chunk_id": i})]
-                graph_docs = self.graph_transformer.convert_to_graph_documents(documents)
-                all_graph_docs.extend(graph_docs)
+                documents = [Document(page_content=chunk, metadata={"chunk_id": i, "source": "manual"})]
+                eec_docs = self.eec_transformer.convert_to_eec_documents(documents)
+                all_eec_docs.extend(eec_docs)
                 
                 # Update graph database after every chunk
-                if self.graph_db and graph_docs:
+                if self.graph_db and eec_docs:
                     try:
-                        self.graph_db.add_graph_documents(graph_docs)
+                        self._update_neo4j_with_eec(eec_docs)
                         print(f"  Updated graph database with chunk {i+1}")
                     except Exception as e:
                         print(f"  Error updating graph database: {e}")
                 
                 # Periodic saving
                 if (i + 1) % save_every == 0:
-                    self._save_progress(all_graph_docs, i + 1, len(chunks))
+                    self._save_eec_progress(all_eec_docs, i + 1, len(chunks))
                 
                 # Add small delay to avoid rate limiting
                 if i % 20 == 0 and i > 0:
@@ -102,9 +106,9 @@ class ManualGraphBuilder:
                 continue
         
         # Final save
-        self._save_progress(all_graph_docs, len(chunks), len(chunks), final=True)
+        self._save_eec_progress(all_eec_docs, len(chunks), len(chunks), final=True)
         
-        return all_graph_docs
+        return all_eec_docs
     
     def build_graph_from_manual_range(self, file_path: str, start_line: int = 0, end_line: int = None) -> Dict[str, Any]:
         """Build knowledge graph from a specific range of lines in the manual"""
@@ -186,6 +190,226 @@ class ManualGraphBuilder:
         except Exception as e:
             print(f"  ⚠️  Error saving progress: {e}")
     
+    def _update_neo4j_with_eec(self, eec_docs: List[EECGraphDocument]):
+        """Update Neo4j database with EEC documents"""
+        for doc in eec_docs:
+            # Add entities
+            for entity in doc.entities:
+                # Filter out empty dictionaries and None values
+                properties = {k: v for k, v in entity.properties.items() if v is not None and v != {}}
+                concepts = entity.concepts if entity.concepts else []
+                
+                query = f"""
+                MERGE (e:Entity:{entity.type} {{id: $id}})
+                SET e += $properties
+                SET e.concepts = $concepts
+                SET e.source_chunk = $source_chunk
+                """
+                self.graph_db.query(query, {
+                    "id": entity.id,
+                    "properties": properties,
+                    "concepts": concepts,
+                    "source_chunk": entity.source_chunk
+                })
+            
+            # Add events
+            for event in doc.events:
+                # Filter out empty dictionaries and None values
+                properties = {k: v for k, v in event.properties.items() if v is not None and v != {}}
+                prerequisites = event.prerequisites if event.prerequisites else []
+                concepts = event.concepts if event.concepts else []
+                
+                query = f"""
+                MERGE (e:Event:{event.type} {{id: $id}})
+                SET e += $properties
+                SET e.actor = $actor
+                SET e.target = $target
+                SET e.temporal_order = $temporal_order
+                SET e.prerequisites = $prerequisites
+                SET e.concepts = $concepts
+                SET e.source_chunk = $source_chunk
+                """
+                self.graph_db.query(query, {
+                    "id": event.id,
+                    "properties": properties,
+                    "actor": event.actor,
+                    "target": event.target,
+                    "temporal_order": event.temporal_order,
+                    "prerequisites": prerequisites,
+                    "concepts": concepts,
+                    "source_chunk": event.source_chunk
+                })
+            
+            # Add concepts
+            for concept in doc.concepts:
+                # Filter out empty dictionaries and None values
+                properties = {k: v for k, v in concept.properties.items() if v is not None and v != {}}
+                applies_to = concept.applies_to if concept.applies_to else []
+                
+                query = f"""
+                MERGE (c:Concept:{concept.type} {{id: $id}})
+                SET c += $properties
+                SET c.applies_to = $applies_to
+                SET c.domain = $domain
+                SET c.source_chunk = $source_chunk
+                """
+                self.graph_db.query(query, {
+                    "id": concept.id,
+                    "properties": properties,
+                    "applies_to": applies_to,
+                    "domain": concept.domain,
+                    "source_chunk": concept.source_chunk
+                })
+            
+            # Add relationships
+            for relationship in doc.relationships:
+                # Filter out empty dictionaries and None values
+                properties = {k: v for k, v in relationship.properties.items() if v is not None and v != {}}
+                
+                # Only set temporal_info if it contains actual data
+                if relationship.temporal_info and any(v for v in relationship.temporal_info.values()):
+                    query = f"""
+                    MATCH (a {{id: $source}})
+                    MATCH (b {{id: $target}})
+                    MERGE (a)-[r:{relationship.type}]->(b)
+                    SET r += $properties
+                    SET r.temporal_info = $temporal_info
+                    """
+                    params = {
+                        "source": relationship.source,
+                        "target": relationship.target,
+                        "properties": properties,
+                        "temporal_info": relationship.temporal_info
+                    }
+                else:
+                    query = f"""
+                    MATCH (a {{id: $source}})
+                    MATCH (b {{id: $target}})
+                    MERGE (a)-[r:{relationship.type}]->(b)
+                    SET r += $properties
+                    """
+                    params = {
+                        "source": relationship.source,
+                        "target": relationship.target,
+                        "properties": properties
+                    }
+                
+                self.graph_db.query(query, params)
+    
+    def _save_eec_progress(self, eec_docs: List[EECGraphDocument], processed: int, total: int, final: bool = False):
+        """Save EEC progress to JSON file"""
+        if final:
+            filename = "e80_eec_knowledge_graph_final.json"
+            print(f"💾 Saving final EEC results to {filename}")
+        else:
+            filename = f"e80_eec_knowledge_graph_progress_{processed}of{total}.json"
+            print(f"💾 Saving EEC progress: {processed}/{total} chunks to {filename}")
+        
+        try:
+            self.export_eec_json(eec_docs, filename)
+            
+            # Calculate EEC stats
+            total_entities = sum(len(doc.entities) for doc in eec_docs)
+            total_events = sum(len(doc.events) for doc in eec_docs)
+            total_concepts = sum(len(doc.concepts) for doc in eec_docs)
+            total_relationships = sum(len(doc.relationships) for doc in eec_docs)
+            
+            stats = {
+                "processed_chunks": processed,
+                "total_chunks": total,
+                "progress_percentage": round((processed / total) * 100, 1),
+                "total_entities": total_entities,
+                "total_events": total_events,
+                "total_concepts": total_concepts,
+                "total_relationships": total_relationships,
+                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+            }
+            
+            stats_filename = filename.replace('.json', '_stats.json')
+            with open(stats_filename, 'w') as f:
+                json.dump(stats, f, indent=2)
+                
+        except Exception as e:
+            print(f"  ⚠️  Error saving EEC progress: {e}")
+    
+    def export_eec_json(self, eec_docs: List[EECGraphDocument], output_path: str):
+        """Export EEC data to JSON format"""
+        export_data = {
+            "entities": [],
+            "events": [],
+            "concepts": [],
+            "relationships": []
+        }
+        
+        for doc in eec_docs:
+            # Add entities
+            for entity in doc.entities:
+                export_data["entities"].append({
+                    "id": entity.id,
+                    "type": entity.type,
+                    "properties": entity.properties,
+                    "concepts": entity.concepts,
+                    "source_chunk": entity.source_chunk
+                })
+            
+            # Add events
+            for event in doc.events:
+                export_data["events"].append({
+                    "id": event.id,
+                    "type": event.type,
+                    "properties": event.properties,
+                    "actor": event.actor,
+                    "target": event.target,
+                    "temporal_order": event.temporal_order,
+                    "prerequisites": event.prerequisites,
+                    "concepts": event.concepts,
+                    "source_chunk": event.source_chunk
+                })
+            
+            # Add concepts
+            for concept in doc.concepts:
+                export_data["concepts"].append({
+                    "id": concept.id,
+                    "type": concept.type,
+                    "properties": concept.properties,
+                    "applies_to": concept.applies_to,
+                    "domain": concept.domain,
+                    "source_chunk": concept.source_chunk
+                })
+            
+            # Add relationships
+            for relationship in doc.relationships:
+                export_data["relationships"].append({
+                    "source": relationship.source,
+                    "target": relationship.target,
+                    "type": relationship.type,
+                    "properties": relationship.properties,
+                    "temporal_info": relationship.temporal_info
+                })
+        
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(export_data, f, indent=2, ensure_ascii=False)
+        
+        print(f"EEC graph exported to {output_path}")
+
+    def process_temporal_and_schema(self, eec_docs: List[EECGraphDocument]) -> Dict[str, Any]:
+        """Process temporal patterns and induce schemas from EEC documents"""
+        
+        print("Extracting temporal patterns...")
+        temporal_patterns = self.temporal_extractor.extract_temporal_patterns(eec_docs)
+        
+        print("Inducing schemas...")
+        schemas = self.schema_inducer.induce_schemas(eec_docs)
+        
+        # Export temporal patterns and schemas
+        self.temporal_extractor.export_temporal_patterns(temporal_patterns, "e80_temporal_patterns.json")
+        self.schema_inducer.export_schemas(schemas, "e80_schemas.json")
+        
+        return {
+            "temporal_patterns": temporal_patterns,
+            "schemas": schemas
+        }
+
     def build_graph_from_manual(self, file_path: str, max_lines: int = None) -> Dict[str, Any]:
         """Main method to build knowledge graph from manual"""
         print("Reading manual file...")
@@ -208,21 +432,30 @@ class ManualGraphBuilder:
         chunks = self.chunk_document(clean_text)
         print(f"Created {len(chunks)} chunks")
         
-        print("Extracting graph elements...")
-        graph_docs = self.extract_graph_from_chunks(chunks)
+        print("Extracting EEC graph elements...")
+        eec_docs = self.extract_graph_from_chunks(chunks)
         
         # Graph already stored incrementally during processing
         
-        # Return summary statistics
-        total_nodes = sum(len(doc.nodes) for doc in graph_docs)
-        total_relationships = sum(len(doc.relationships) for doc in graph_docs)
+        # Process temporal patterns and schemas
+        temporal_and_schema = self.process_temporal_and_schema(eec_docs)
+        
+        # Return EEC summary statistics
+        total_entities = sum(len(doc.entities) for doc in eec_docs)
+        total_events = sum(len(doc.events) for doc in eec_docs)
+        total_concepts = sum(len(doc.concepts) for doc in eec_docs)
+        total_relationships = sum(len(doc.relationships) for doc in eec_docs)
         
         return {
             "total_chunks": len(chunks),
-            "total_graph_documents": len(graph_docs),
-            "total_nodes": total_nodes,
+            "total_eec_documents": len(eec_docs),
+            "total_entities": total_entities,
+            "total_events": total_events,
+            "total_concepts": total_concepts,
             "total_relationships": total_relationships,
-            "graph_documents": graph_docs
+            "eec_documents": eec_docs,
+            "temporal_patterns": temporal_and_schema["temporal_patterns"],
+            "schemas": temporal_and_schema["schemas"]
         }
     
     def export_graph_json(self, graph_docs: List[Any], output_path: str):

@@ -41,18 +41,38 @@ def main():
         result = builder.build_graph_from_manual(manual_path)
         
         # Print results
-        print("\n✅ Graph extraction completed!")
+        print("\n✅ EEC Graph extraction completed!")
         print(f"📊 Statistics:")
         print(f"  - Total chunks processed: {result['total_chunks']}")
-        print(f"  - Graph documents created: {result['total_graph_documents']}")
-        print(f"  - Total nodes extracted: {result['total_nodes']}")
+        print(f"  - EEC documents created: {result['total_eec_documents']}")
+        print(f"  - Total entities extracted: {result['total_entities']}")
+        print(f"  - Total events extracted: {result['total_events']}")
+        print(f"  - Total concepts extracted: {result['total_concepts']}")
         print(f"  - Total relationships: {result['total_relationships']}")
         
+        # Print temporal patterns summary
+        temporal_patterns = result['temporal_patterns']
+        print(f"\n🔄 Temporal Patterns:")
+        print(f"  - Diagnostic sequences: {len(temporal_patterns['diagnostic_sequences'])}")
+        print(f"  - Causal chains: {len(temporal_patterns['causal_chains'])}")
+        print(f"  - Prerequisite graphs: {len(temporal_patterns['prerequisite_graphs'])}")
+        print(f"  - Conditional logic: {len(temporal_patterns['conditional_logic'])}")
+        
+        # Print schemas summary
+        schemas = result['schemas']
+        print(f"\n🏗️ Schemas:")
+        print(f"  - Entity hierarchies: {len(schemas['entity_hierarchies'])}")
+        print(f"  - Event patterns: {len(schemas['event_patterns'])}")
+        print(f"  - Concept networks: {len(schemas['concept_networks'])}")
+        print(f"  - Domain schemas: {len(schemas['domain_schemas'])}")
+        
         # Export to JSON
-        if result['graph_documents']:
-            output_path = "e80_knowledge_graph.json"
-            builder.export_graph_json(result['graph_documents'], output_path)
-            print(f"📄 Graph exported to: {output_path}")
+        if result['eec_documents']:
+            output_path = "e80_eec_knowledge_graph.json"
+            builder.export_eec_json(result['eec_documents'], output_path)
+            print(f"📄 EEC graph exported to: {output_path}")
+            print(f"📄 Temporal patterns exported to: e80_temporal_patterns.json")
+            print(f"📄 Schemas exported to: e80_schemas.json")
         
     except Exception as e:
         print(f"❌ Error during processing: {e}")
