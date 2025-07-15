@@ -1,0 +1,13 @@
+langchain
+langchain-anthropic
+langchain-community
+langchain-experimental
+neo4j
+python-dotenv
+tiktoken
+anthropic
+pydantic
+numpy
+matplotlib
+networkx
+streamlit
