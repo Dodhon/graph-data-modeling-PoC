@@ -4,45 +4,60 @@ Entity-Event-Concept (EEC) knowledge graph extraction from technical documentati
 
 ## Overview
 
-This pipeline transforms technical manuals into a comprehensive knowledge graph optimized for troubleshooting LGV malfunctions. It uses advanced LLM-powered extraction to identify entities, events, concepts, temporal sequences, and causal relationships.
+This pipeline transforms technical manuals into a comprehensive knowledge graph optimized for troubleshooting LGV malfunctions. It uses advanced LLM-powered extraction to identify entities, events, concepts, temporal sequences, and causal relationships from unstructured technical documentation.
 
 ## Features
 
 ### Core Capabilities
-- **Entity-Event-Concept Extraction**: Identifies components, procedures, and abstract principles
-- **Temporal Reasoning**: Extracts diagnostic sequences and causal chains
-- **Schema Induction**: Creates hierarchical taxonomies and patterns
+- **Entity-Event-Concept Extraction**: Identifies components, procedures, and abstract principles using specialized LLM prompts
+- **Temporal Reasoning**: Extracts diagnostic sequences, causal chains, and prerequisite relationships
+- **Schema Induction**: Creates hierarchical taxonomies and domain-specific patterns
 - **Multi-Domain Support**: Handles hardware, software, environmental, and human factors
-- **Incremental Processing**: Updates Neo4j after each chunk for fault tolerance
+- **Incremental Processing**: Updates Neo4j after each chunk for fault tolerance and progress tracking
+- **Robust Error Handling**: Advanced JSON parsing with fallback mechanisms for malformed responses
 
 ### Extraction Types
 
 #### Entities
-- **COMPONENTS**: Mechanical parts, hydraulic elements, electrical components
+- **COMPONENTS**: Mechanical parts, hydraulic systems, electrical components
 - **TOOLS**: Diagnostic equipment, repair tools, measurement devices
-- **PEOPLE**: Operators, technicians, engineers
+- **PEOPLE**: Operators, technicians, engineers, manufacturers
+- **LOCATIONS**: Facilities, plant locations, work areas
 - **SYMPTOMS**: Error codes, warning signals, performance issues
 - **MEASUREMENTS**: Pressure readings, voltage levels, temperatures
 
 #### Events
-- **DIAGNOSTIC**: Inspection procedures, testing steps
-- **MAINTENANCE**: Repair actions, replacements, adjustments
-- **SAFETY**: Safety checks, lockout procedures
-- **OPERATIONAL**: Startup, shutdown, normal operations
-- **FAILURE**: Fault conditions, error states
+- **DIAGNOSTIC**: Inspection procedures, testing steps, troubleshooting actions
+- **MAINTENANCE**: Repair actions, replacements, adjustments, servicing
+- **SAFETY**: Safety checks, lockout procedures, protective measures
+- **OPERATIONAL**: Startup, shutdown, normal operations, procedures
+- **FAILURE**: Fault conditions, error states, malfunction events
 
 #### Concepts
-- **SAFETY_PRINCIPLES**: Safety rules, protective measures
-- **DIAGNOSTIC_LOGIC**: Troubleshooting approaches
-- **MAINTENANCE_CONCEPTS**: Preventive maintenance strategies
-- **FAILURE_PATTERNS**: Common failure modes
+- **SAFETY_PRINCIPLES**: Safety rules, protective measures, risk management
+- **DIAGNOSTIC_LOGIC**: Troubleshooting approaches, decision trees
+- **MAINTENANCE_CONCEPTS**: Preventive maintenance strategies, best practices
+- **OPERATIONAL_PRINCIPLES**: Normal operation guidelines, standards
+- **FAILURE_PATTERNS**: Common failure modes, root cause analysis
+- **TECHNICAL_CONCEPTS**: Technical principles, domain knowledge, engineering concepts
+
+#### Relationships
+- **CAUSES**: Causal relationships between entities and events
+- **REQUIRES**: Dependencies and prerequisites
+- **PREVENTS**: Preventive relationships
+- **DIAGNOSES**: Diagnostic connections
+- **FIXES**: Solution relationships
+- **APPLIES_TO**: Concept applications
+- **PART_OF**: Hierarchical relationships
+- **HAPPENS_BEFORE**: Temporal sequences
+- **TRIGGERS**: Event triggering relationships
 
 ## Quick Start
 
 ### Prerequisites
 - Python 3.8+
-- Anthropic API key (Claude access)
-- Neo4j database (optional)
+- Anthropic API key (Claude 3.5 Sonnet access)
+- Neo4j database (optional for graph storage)
 
 ### Installation
 
@@ -82,70 +97,129 @@ result = builder.build_graph_from_manual(manual_path, max_lines=100)
 
 ### Core Modules
 
-- **`src/eec_graph_transformer.py`**: Extracts entities, events, and concepts using specialized LLM prompts
-- **`src/temporal_extractor.py`**: Identifies diagnostic sequences, causal chains, and prerequisites
-- **`src/schema_inducer.py`**: Creates hierarchical schemas and concept networks
-- **`src/graph_builder.py`**: Orchestrates the complete pipeline
+- **`src/eec_graph_transformer.py`**: Main extraction engine with specialized prompts for entities, events, concepts, and relationships
+- **`src/temporal_extractor.py`**: Identifies diagnostic sequences, causal chains, and prerequisite graphs
+- **`src/schema_inducer.py`**: Creates hierarchical schemas, concept networks, and domain taxonomies
+- **`src/graph_builder.py`**: Orchestrates the complete pipeline with incremental processing and error recovery
 
 ### Data Flow
 
 1. **Input**: Technical manual text (`data/input/E80_manual_text.txt`)
-2. **Preprocessing**: Cleans formatting, removes artifacts
-3. **Chunking**: Splits into 800-character overlapping chunks
-4. **EEC Extraction**: LLM analyzes each chunk for entities/events/concepts
-5. **Temporal Processing**: Identifies sequences and causal relationships
-6. **Schema Induction**: Creates hierarchies and patterns
-7. **Storage**: Updates Neo4j incrementally, exports JSON
+2. **Preprocessing**: Removes page markers, line numbers, and normalizes whitespace
+3. **Chunking**: Splits into 800-character overlapping chunks (100-character overlap)
+4. **EEC Extraction**: Claude 3.5 Sonnet analyzes each chunk for:
+   - Entities (concrete objects and components)
+   - Events (actions and procedures)
+   - Concepts (abstract principles and knowledge)
+   - Relationships (connections between items)
+5. **Temporal Processing**: Identifies sequences, causal chains, and conditional logic
+6. **Schema Induction**: Creates hierarchies, patterns, and domain-specific schemas
+7. **Storage**: Updates Neo4j incrementally after each chunk, exports comprehensive JSON files
+
+### Technical Configuration
+
+**LLM Settings:**
+- Model: Claude 3.5 Sonnet (claude-3-5-sonnet-20241022)
+- Temperature: 0 (deterministic outputs)
+- Max tokens: 8192
+- Timeout: 90 seconds with 3 retries
+
+**Processing Settings:**
+- Chunk size: 800 characters
+- Chunk overlap: 100 characters
+- Rate limiting: 3-second pause every 20 chunks
+- Progress saves: Every 100 chunks
 
 ### Output Files
 
-- **`e80_eec_knowledge_graph.json`**: Complete graph with entities, events, concepts, relationships
-- **`e80_temporal_patterns.json`**: Diagnostic sequences, causal chains, prerequisites
-- **`e80_schemas.json`**: Entity hierarchies, event patterns, concept networks
+- **`e80_eec_knowledge_graph.json`**: Complete graph with entities, events, concepts, and relationships
+- **`e80_temporal_patterns.json`**: Diagnostic sequences, causal chains, prerequisite graphs, conditional logic
+- **`e80_schemas.json`**: Entity hierarchies, event patterns, concept networks, domain schemas
+- **Progress files**: Incremental saves during processing (`*_progress_*.json`)
 
 ## Query Examples
 
-### Find Diagnostic Procedure
+### Find Components and Their Relationships
 ```cypher
-MATCH (s:Symptom {id: "low_hydraulic_pressure"})-[:INDICATES]->(cause:Entity)
-MATCH (cause)-[:DIAGNOSED_BY]->(seq:DiagnosticSequence)
-MATCH (seq)-[:CONTAINS]->(step:Event)
-RETURN seq.name, step.action, step.temporal_order
-ORDER BY step.temporal_order
+MATCH (c:Entity {type: "COMPONENT"})
+OPTIONAL MATCH (c)-[r]->(related)
+RETURN c.name, c.description, type(r), related.name
+LIMIT 10
 ```
 
-### Get Causal Chain
+### Get Diagnostic Procedures
 ```cypher
-MATCH (symptom:Symptom)-[:INDICATES]->(root_cause:Entity)
-MATCH (root_cause)-[:RESOLVED_BY]->(solution:Event)
-RETURN symptom.description, root_cause.id, solution.action
+MATCH (d:Event {type: "DIAGNOSTIC"})
+RETURN d.name, d.description, d.domain
+ORDER BY d.name
 ```
 
-### Find Required Tools
+### Find Causal Relationships
 ```cypher
-MATCH (procedure:Event {type: "MAINTENANCE"})-[:REQUIRES]->(tool:Tool)
-RETURN procedure.action, collect(tool.name) as required_tools
+MATCH (source)-[:CAUSES]->(target)
+RETURN source.name, target.name, source.type, target.type
+```
+
+### Get Safety-Related Concepts
+```cypher
+MATCH (c:Concept {type: "SAFETY_PRINCIPLES"})
+RETURN c.name, c.description, c.importance
 ```
 
 ## Performance
 
 - **Processing time**: ~3-4 hours for complete E80 manual (16,565 lines)
-- **Chunk processing**: ~2000 chunks with 100-character overlap
-- **Memory efficient**: Incremental processing and storage
-- **Fault tolerant**: Progress saved every 100 chunks
+- **Total chunks**: 1,099 chunks with 100-character overlap
+- **Memory efficient**: Incremental processing with progress saves
+- **Fault tolerant**: Automatic recovery from interruptions
+- **Rate limited**: Built-in delays to prevent API throttling
+
+### Current Processing Metrics
+- **Entities extracted**: ~1,200+ per 300 chunks processed
+- **Events extracted**: ~650+ per 300 chunks processed
+- **Concepts extracted**: ~950+ per 300 chunks processed
+- **Relationships extracted**: ~1,200+ per 300 chunks processed
 
 ## Use Cases
 
 ### Primary: LGV Troubleshooting
 - Diagnose hydraulic system failures
-- Find maintenance procedures
-- Identify required tools
-- Track safety prerequisites
+- Find maintenance procedures and requirements
+- Identify required tools and components
+- Track safety prerequisites and protocols
+- Analyze failure patterns and root causes
+
+### Query-Based Troubleshooting
+- "What tools are required for hydraulic pump maintenance?"
+- "What are the safety prerequisites for electrical system work?"
+- "What diagnostic steps should I follow for low pressure symptoms?"
+- "What components are part of the hydraulic system?"
 
 ### Future: Support Ticket Integration
 - Link real incidents to manual procedures
 - Validate solutions against documentation
 - Build knowledge from resolved cases
+- Create automated troubleshooting workflows
+
+## Error Handling and Robustness
+
+### JSON Response Processing
+- Advanced parsing for both array and object formats
+- Bracket/brace counting for proper JSON extraction
+- Fallback mechanisms for malformed responses
+- Content validation before processing
+
+### Rate Limiting and Recovery
+- Built-in delays to prevent API throttling
+- Connection error recovery with extended delays
+- Progress preservation on failures
+- Automatic retry mechanisms
+
+### Data Validation
+- Property filtering for Neo4j compatibility
+- Relationship validation between verified entities
+- Empty value handling and cleanup
+- Source chunk tracking for debugging
 
 ## Project Structure
 
@@ -160,7 +234,7 @@ graph-data-modeling-PoC/
 │   └── run_graph_extraction.py     # Entry point
 ├── data/
 │   ├── input/
-│   │   └── E80_manual_text.txt    # Source technical manual
+│   │   └── E80_manual_text.txt     # Source technical manual
 │   └── output/                     # Generated JSON files
 ├── config/
 │   └── .env.example                # Configuration template
@@ -171,16 +245,19 @@ graph-data-modeling-PoC/
 
 - **LLM**: Claude 3.5 Sonnet (via Anthropic API)
 - **Framework**: LangChain for document processing
-- **Database**: Neo4j for graph storage
+- **Database**: Neo4j for graph storage (optional)
 - **Language**: Python 3.8+
+- **Processing**: Incremental chunking with overlap
 
 ## Contributing
 
 This is a proof-of-concept for industrial knowledge graph construction. Contributions welcome for:
-- Additional entity/event types
-- Enhanced temporal reasoning
-- Improved troubleshooting queries
+- Additional entity/event/concept types
+- Enhanced temporal reasoning algorithms
+- Improved troubleshooting query patterns
 - Multi-language support
+- Performance optimizations
+- Cross-chunk relationship detection
 
 ## License
 
