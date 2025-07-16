@@ -1,0 +1,4461 @@
+{
+  "entities": [
+    {
+      "id": "battery_compartment",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Battery Compartment",
+        "description": "Housing for LGV batteries",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "electrical_panel",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Panel",
+        "description": "Control panel containing electrical components",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "electrical_cables",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Cables",
+        "description": "Wiring for power distribution",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "motorized_wheel",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Motorized Wheel",
+        "description": "Powered wheel for vehicle movement",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "hot_surfaces",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Hot Surfaces",
+        "description": "Elevated temperature due to battery usage and charging",
+        "domain": "environmental",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "qualified_personnel",
+      "type": "PERSON",
+      "properties": {
+        "name": "Qualified Personnel",
+        "description": "Authorized technicians for maintenance and commissioning",
+        "domain": "human",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "electrical_panels",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Panels",
+        "description": "Panels containing electrical components with safety warnings",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "batteries",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "LGV Batteries",
+        "description": "Power source for LGV vehicles",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "battery_chargers",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Battery Chargers",
+        "description": "Equipment for charging LGV batteries",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "specific_tools",
+      "type": "TOOL",
+      "properties": {
+        "name": "Specific Service Tools",
+        "description": "Authorized tools for accessing live parts",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "authorized_personnel",
+      "type": "PERSON",
+      "properties": {
+        "name": "Authorized Personnel",
+        "description": "Staff trained to work on powered equipment",
+        "domain": "human",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "supply_voltage",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Supply Voltage",
+        "description": "48 volts system voltage",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "max_temperature",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Maximum Temperature",
+        "description": "45°C maximum safe temperature",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "electrocution",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Electrocution Risk",
+        "description": "Risk of electrical shock from malfunctioning equipment",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "burns",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Burns",
+        "description": "Burns from hot surfaces on equipment",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "lgv",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "LGV",
+        "description": "Laser Guided Vehicle",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "battery_charging_station",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Battery Charging Station",
+        "description": "Equipment for charging LGV batteries",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "battery_compartment",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Battery Compartment",
+        "description": "Housing for LGV battery",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "electrical_panel",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Panel",
+        "description": "Control panel for electrical systems",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "motorized_wheel",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Motorized Wheel",
+        "description": "Powered wheel for LGV movement",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "charger_arm",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Motorized Charger Arm",
+        "description": "Automated arm for connecting charger",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "electrical_contacts",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Contacts",
+        "description": "Connection points for electrical charging",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "crushing",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Crushing Risk",
+        "description": "Mechanical hazard of being crushed",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "electrocution",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Electrocution Risk",
+        "description": "Electrical hazard of shock",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "emergency_stop_button",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Emergency Stop Button",
+        "description": "Safety device that can be activated to stop machine in dangerous situations",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "emergency_rope",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Emergency Rope",
+        "description": "Safety rope that can trigger emergency stop when pulled",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "charger_arm",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Charger Arm",
+        "description": "Mechanical arm for charging the LGV",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "qualified_personnel",
+      "type": "PERSON",
+      "properties": {
+        "name": "Qualified Personnel",
+        "description": "Manufacturer's certified staff for commissioning and training",
+        "domain": "human",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "electrical_covers",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Equipment Covers",
+        "description": "Protective covers for electrical components",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "battery_charger_arm",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Battery Charger Arm",
+        "description": "Moving mechanism for connecting charger to LGV",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "electrical_contacts",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Contacts",
+        "description": "Contact points for charging on LGV sides",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "batteries",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "LGV Batteries",
+        "description": "Power source for LGV operation",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "high_temperature",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "High Temperature",
+        "description": "Temperature exceeding 45°C",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "crushing",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Crushing Risk",
+        "description": "Risk of body parts being crushed by moving parts",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "temp_45c",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "45°C Temperature Limit",
+        "description": "Maximum safe operating temperature",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "lgv_speed",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "LGV Speed Limit",
+        "description": "Reduced speed of 0.3 m/sec",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "safety_clearance",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Safety Clearance",
+        "description": "Minimum space between LGV and fixed structures of 0.5m",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "authorized_personnel",
+      "type": "PERSON",
+      "properties": {
+        "name": "Authorized Personnel",
+        "description": "Trained staff allowed in restricted areas",
+        "domain": "human",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "obstacle_detection",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Obstacle Detection System",
+        "description": "Safety devices for detecting obstacles",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "warning_signals",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Warning Signals",
+        "description": "Acoustic and visual alert system",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "laser_scanner_nav",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Navigation Laser Scanner",
+        "description": "Laser device used for LGV navigation",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "laser_scanner_safety",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Safety Laser Scanner",
+        "description": "Laser device used for LGV safety detection",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "acoustic_signal",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Acoustic Warning Signal",
+        "description": "Audio warning system for LGV movement and emergency stops",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "noise_discomfort",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Noise Discomfort",
+        "description": "Stress and loss of attention due to operational noise",
+        "domain": "environmental",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "reduced_attention",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Reduced Attention Span",
+        "description": "Decreased alertness due to overconfidence",
+        "domain": "human",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "operating_area",
+      "type": "LOCATION",
+      "properties": {
+        "name": "Machine Operating Area",
+        "description": "Area where LGVs operate",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "navigation_laser_scanner",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Navigation Laser Scanner",
+        "description": "Rotating laser device used for LGV navigation",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "safety_laser_scanner",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Safety Laser Scanner",
+        "description": "Rotating laser device for safety and obstacle detection",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "hydraulic_circuit",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Hydraulic Circuit",
+        "description": "Hydraulic system on lifting unit and electrical panel",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "photocells",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Photocells",
+        "description": "Light sensors for detection",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "operating_area",
+      "type": "LOCATION",
+      "properties": {
+        "name": "LGV Operating Area",
+        "description": "Area where LGV operates including 2m safety zone",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "visible_laser",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Visible Laser Beams",
+        "description": "Presence of visible laser radiation",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "safety_distance",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Safety Distance",
+        "description": "2 meter minimum safety distance around LGV",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "hydraulic_valves",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Safety Valves",
+        "description": "Valves preventing uncontrolled vertical/horizontal movements",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "aunder theequipment. -Area aroundthe LGV ata distanceof less than2 m.-Pipes and hydrau-lic component..."
+    },
+    {
+      "id": "hydraulic_pipes",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Hydraulic Pipes",
+        "description": "Pressurized oil-containing pipes",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "aunder theequipment. -Area aroundthe LGV ata distanceof less than2 m.-Pipes and hydrau-lic component..."
+    },
+    {
+      "id": "oil_leak",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Oil Leakage",
+        "description": "Oil leaks causing slippery floor and safety hazards",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "aunder theequipment. -Area aroundthe LGV ata distanceof less than2 m.-Pipes and hydrau-lic component..."
+    },
+    {
+      "id": "safety_perimeter",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Safety Distance",
+        "description": "2m minimum distance around LGV",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "aunder theequipment. -Area aroundthe LGV ata distanceof less than2 m.-Pipes and hydrau-lic component..."
+    },
+    {
+      "id": "lgv_safety_devices",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "LGV Safety Devices",
+        "description": "Devices to detect persons and obstacles",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ircuit. -Maintenance instruc-tions are described inchap. 8. Maintenance. -Personnel must betrained i..."
+    },
+    {
+      "id": "slippery_floor",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Slippery Floor",
+        "description": "Falls caused by slippery floor condition",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ircuit. -Maintenance instruc-tions are described inchap. 8. Maintenance. -Personnel must betrained i..."
+    },
+    {
+      "id": "work_area",
+      "type": "LOCATION",
+      "properties": {
+        "name": "LGV Work Area",
+        "description": "Area around moving LGV within 2m distance",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ircuit. -Maintenance instruc-tions are described inchap. 8. Maintenance. -Personnel must betrained i..."
+    },
+    {
+      "id": "maintenance_personnel",
+      "type": "PERSON",
+      "properties": {
+        "name": "Maintenance Personnel",
+        "description": "Trained staff for machine maintenance",
+        "domain": "human",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ircuit. -Maintenance instruc-tions are described inchap. 8. Maintenance. -Personnel must betrained i..."
+    },
+    {
+      "id": "safety_distance",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Safety Distance",
+        "description": "2 meter minimum safety distance from LGV",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "ircuit. -Maintenance instruc-tions are described inchap. 8. Maintenance. -Personnel must betrained i..."
+    },
+    {
+      "id": "safety_devices",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Safety Detection Devices",
+        "description": "Devices to detect persons and obstacles in main movement directions",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "emergency_stop",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Emergency Stop Devices",
+        "description": "Buttons and ropes that can be activated to stop machine",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "barriers",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Workplace Barriers",
+        "description": "Physical barriers demarcating workplace area",
+        "domain": "environmental",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "motors",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Drive Motors",
+        "description": "Motors providing movement power to LGV",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "operators",
+      "type": "PERSON",
+      "properties": {
+        "name": "LGV Operators",
+        "description": "Authorized personnel operating the LGV",
+        "domain": "human",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "speed_reduction",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Vehicle Speed Decrease",
+        "description": "Automatic speed reduction when obstacle detection area is reduced",
+        "domain": "software",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "safety_devices",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Safety obstacle detection devices",
+        "description": "Devices that check for obstacles in LGV path",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "loading_station",
+      "type": "LOCATION",
+      "properties": {
+        "name": "Loading/unloading stations",
+        "description": "Areas where pallets are transferred between vehicle and station",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "impact_risk",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Impact risk",
+        "description": "Risk of collision due to person entering vehicle path",
+        "domain": "human",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "stopping_distance",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Minimum stopping distance",
+        "description": "Required distance for vehicle to completely stop",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "authorized_personnel",
+      "type": "PERSON",
+      "properties": {
+        "name": "Authorized and trained personnel",
+        "description": "Staff permitted to access LGV operational areas",
+        "domain": "human",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "lgv_battery",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "LGV Battery",
+        "description": "Power source component in battery compartment",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "electrical_panel",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Panel",
+        "description": "Control panel containing electrical equipment",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "motorized_wheel",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Motorized Wheel",
+        "description": "Powered wheel for LGV movement",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "safety_sensors",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Safety Sensors",
+        "description": "Detection field sensors for obstacle avoidance",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "crushing",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Mechanical Crushing",
+        "description": "Risk of mechanical crushing during operation",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "electrocution",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Electrocution",
+        "description": "Risk of electrical shock during operation",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "sensor_height",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Safety Sensor Height",
+        "description": "20cm height of safety detection field from floor",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "battery",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Battery",
+        "description": "Power source for LGV",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "battery_compartment",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Battery Compartment",
+        "description": "Housing for LGV battery",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "electrical_panel",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Panel",
+        "description": "Control panel for electrical systems",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "motorized_wheel",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Motorized Wheel",
+        "description": "Powered wheel for LGV movement",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "charging_station",
+      "type": "LOCATION",
+      "properties": {
+        "name": "Battery Charging Station",
+        "description": "Location for charging LGV batteries",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "electrical_contacts",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Contacts",
+        "description": "Connection points for charging",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "movable_arm",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Movable Arm",
+        "description": "Charging station connection mechanism",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "emergency_stop",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Emergency Stop Devices",
+        "description": "Safety buttons and ropes for emergency shutdown",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "dust_buildup",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Dust Buildup",
+        "description": "Accumulation of dust on electrical contacts",
+        "domain": "environmental",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "emergency_buttons",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Emergency Buttons",
+        "description": "Safety devices that cut power to motors when activated",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "emergency_ropes",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Emergency Ropes",
+        "description": "Safety devices that cut power when pulled",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "battery_charger_arm",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Battery Charger Arm",
+        "description": "Mechanical arm for connecting charger to LGV",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "electrical_contacts",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Contacts",
+        "description": "Power connection points on LGV and chargers",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "crushing_hazard",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Finger/Arm Crushing",
+        "description": "Risk of injury from battery charger arm movement",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "electrocution_hazard",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Electrocution Risk",
+        "description": "Risk of electrical shock during charging",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "battery",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Battery",
+        "description": "Power source for LGV",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "electrical_contacts",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Electrical Contacts",
+        "description": "Connection points for electrical systems",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "guidance_system",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Guidance System",
+        "description": "Navigation control system for LGV",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "encoder",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Encoder",
+        "description": "Position tracking device",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "uncontrolled_movement",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Uncontrolled Movement",
+        "description": "LGV moves unexpectedly or erratically",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "work_area",
+      "type": "LOCATION",
+      "properties": {
+        "name": "Machine Work Area",
+        "description": "Operating zone around LGV",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "safety_distance",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Safety Distance",
+        "description": "2m minimum distance from moving LGV",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "max_temperature",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Maximum Temperature",
+        "description": "45°C maximum battery temperature limit",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "encoder",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Encoder",
+        "description": "Position tracking device for LGV navigation",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "navigation_system",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Navigation System",
+        "description": "System for LGV route guidance and positioning",
+        "domain": "software",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "safety_sensors",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Safety Sensors",
+        "description": "Detection system for obstacles and hazards",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "enclosed_area",
+      "type": "LOCATION",
+      "properties": {
+        "name": "Enclosed Areas",
+        "description": "Confined spaces with limited escape routes",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "sensor_height",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Safety Sensor Height",
+        "description": "20cm height of safety detection field from floor",
+        "domain": "hardware",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "system_error",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Navigation System Error",
+        "description": "Errors in encoder and navigation systems",
+        "domain": "software",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "safety_detection_field",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Safety Detection Field",
+        "description": "Planar detection area parallel to floor",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "operator_panel",
+      "type": "TOOL",
+      "properties": {
+        "name": "Operator Panel",
+        "description": "Control panel with dead man buttons for manual LGV operation",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "authorized_personnel",
+      "type": "PERSON",
+      "properties": {
+        "name": "Authorized Personnel",
+        "description": "Staff permitted to perform maintenance operations",
+        "domain": "human",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "work_area",
+      "type": "LOCATION",
+      "properties": {
+        "name": "Machine Work Area",
+        "description": "Area within 2m of moving LGV",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "impact_crushing",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Impact and Crushing Risk",
+        "description": "Mechanical hazards during maintenance",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "detection_height",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Detection Field Height",
+        "description": "20cm height from floor",
+        "domain": "environmental",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "charging_tower",
+      "type": "COMPONENT",
+      "properties": {
+        "name": "Charging Tower",
+        "description": "Power supply station for LGV charging",
+        "domain": "hardware",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    },
+    {
+      "id": "impact_crush",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Impact and Crush Risk",
+        "description": "Risk of impact or crushing during manual LGV movement",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    },
+    {
+      "id": "falling_product",
+      "type": "SYMPTOM",
+      "properties": {
+        "name": "Product Falling",
+        "description": "Products falling from LGV during rapid manual movements",
+        "domain": "environmental",
+        "criticality": "medium"
+      },
+      "concepts": [],
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    },
+    {
+      "id": "charging_distance",
+      "type": "MEASUREMENT",
+      "properties": {
+        "name": "Safe Charging Distance",
+        "description": "75cm distance from charging tower center",
+        "domain": "environmental",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    },
+    {
+      "id": "operator",
+      "type": "PERSON",
+      "properties": {
+        "name": "LGV Operator",
+        "description": "Personnel operating the LGV system",
+        "domain": "human",
+        "criticality": "high"
+      },
+      "concepts": [],
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    }
+  ],
+  "events": [
+    {
+      "id": "electrical_access_control",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Electrical Equipment Access Control",
+        "description": "Electrical equipment protected by covers that can only be opened with specific tools by authorized personnel",
+        "frequency": "as_needed",
+        "duration": "N/A",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "authorized personnel",
+      "target": "electrical equipment covers",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "site_commissioning",
+      "type": "OPERATIONAL",
+      "properties": {
+        "name": "Site Commissioning",
+        "description": "Initial commissioning performed by qualified manufacturer personnel on site",
+        "frequency": "as_needed",
+        "duration": "N/A",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "manufacturer qualified personnel",
+      "target": "LGV system",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "visitor_control",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Visitor Access Control",
+        "description": "Visitors must be accompanied by qualified personnel in workplace area",
+        "frequency": "as_needed",
+        "duration": "N/A",
+        "safety_level": "medium",
+        "domain": "human"
+      },
+      "actor": "qualified personnel",
+      "target": "workplace access",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "battery_temp_monitoring",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Battery Temperature Monitoring",
+        "description": "Monitor and prevent battery exposure to temperatures above 45°C to avoid fire risk",
+        "frequency": "as_needed",
+        "duration": "continuous",
+        "safety_level": "high",
+        "domain": "environmental"
+      },
+      "actor": "operator",
+      "target": "lgv_battery",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "electrical_panel_access",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Restricted Electrical Panel Access",
+        "description": "Access to live parts restricted to authorized personnel with specific tools only",
+        "frequency": "as_needed",
+        "duration": "varies",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "authorized_personnel",
+      "target": "electrical_panels",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "electrical_contact_protection",
+      "type": "MAINTENANCE",
+      "properties": {
+        "name": "Electrical Contact Protection",
+        "description": "Ensure electrical contacts on LGVs and chargers are properly covered and recognizable",
+        "frequency": "daily",
+        "duration": "10 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "maintenance_personnel",
+      "target": "lgv_electrical_contacts",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "battery_wiring_check",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Battery Wiring Inspection",
+        "description": "Inspection and verification of battery wiring connections",
+        "frequency": "as_needed",
+        "duration": "30 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "Technician",
+      "target": "LGV Battery",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "charging_test",
+      "type": "DIAGNOSTIC",
+      "properties": {
+        "name": "Charging Operation Test",
+        "description": "Testing of charging operations and connections",
+        "frequency": "as_needed",
+        "duration": "1 hour",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "Technician",
+      "target": "LGV Charging System",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "charger_arm_positioning",
+      "type": "OPERATIONAL",
+      "properties": {
+        "name": "Charger Arm Position Check",
+        "description": "Verification of charger arm movement and positioning relative to LGV",
+        "frequency": "as_needed",
+        "duration": "15 minutes",
+        "safety_level": "medium",
+        "domain": "hardware"
+      },
+      "actor": "Operator",
+      "target": "Charging Station Arm",
+      "temporal_order": 3,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "commissioning_check",
+      "type": "OPERATIONAL",
+      "properties": {
+        "name": "Initial Commissioning",
+        "description": "On-site commissioning performed by manufacturer personnel",
+        "frequency": "as_needed",
+        "duration": "varies",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "manufacturer qualified personnel",
+      "target": "LGV system",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "emergency_stop_activation",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Emergency Stop Procedure",
+        "description": "Activation of emergency stop devices (buttons, ropes) to cut power to motors in dangerous situations",
+        "frequency": "as_needed",
+        "duration": "immediate",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "operator",
+      "target": "LGV motors",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "operator_training",
+      "type": "OPERATIONAL",
+      "properties": {
+        "name": "Operator Training",
+        "description": "Mandatory training provided by manufacturer personnel for operators",
+        "frequency": "as_needed",
+        "duration": "varies",
+        "safety_level": "high",
+        "domain": "human"
+      },
+      "actor": "manufacturer personnel",
+      "target": "operators",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "battery_temp_check",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Battery Temperature Monitoring",
+        "description": "Monitor and prevent battery exposure to temperatures above 45°C",
+        "frequency": "as_needed",
+        "duration": "continuous",
+        "safety_level": "high",
+        "domain": "environmental"
+      },
+      "actor": "System operator",
+      "target": "LGV battery",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "charger_contact_inspection",
+      "type": "MAINTENANCE",
+      "properties": {
+        "name": "Charging Contact Inspection",
+        "description": "Check electrical contacts on LGV and chargers for damage or malfunction",
+        "frequency": "weekly",
+        "duration": "30 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "Maintenance technician",
+      "target": "LGV charging system",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "route_clearance_check",
+      "type": "OPERATIONAL",
+      "properties": {
+        "name": "Route Clearance Verification",
+        "description": "Verify LGV operating area is clear and escape routes are not blocked",
+        "frequency": "daily",
+        "duration": "15 minutes",
+        "safety_level": "high",
+        "domain": "environmental"
+      },
+      "actor": "Safety officer",
+      "target": "LGV operation area",
+      "temporal_order": 3,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "lgv_speed_reduction",
+      "type": "SAFETY",
+      "properties": {
+        "name": "LGV Speed Reduction Near Structures",
+        "description": "Speed reduction to 0.3 m/sec with acoustic and visual signals when LGV moves close to fixed structures (less than 0.5m gap)",
+        "frequency": "as_needed",
+        "duration": "during proximity",
+        "safety_level": "high",
+        "domain": "operational"
+      },
+      "actor": "LGV System",
+      "target": "LGV Movement",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "restricted_area_access",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Restricted Area Access Control",
+        "description": "Only authorized and trained personnel allowed to access dangerous and restricted areas",
+        "frequency": "as_needed",
+        "duration": "continuous",
+        "safety_level": "high",
+        "domain": "human"
+      },
+      "actor": "Authorized Personnel",
+      "target": "Restricted Areas",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "safety_device_monitoring",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Obstacle Detection Safety Device Status",
+        "description": "Monitor when LGVs move with obstacle detection safety devices disabled or partially enabled",
+        "frequency": "as_needed",
+        "duration": "continuous",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "LGV System",
+      "target": "Safety Devices",
+      "temporal_order": 3,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "acoustic_signal_monitoring",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Acoustic Signal Volume Adjustment",
+        "description": "Adjustment of acoustic signal volume based on ambient noise levels to ensure audibility during LGV operations",
+        "frequency": "as_needed",
+        "duration": "5-10 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "Operator",
+      "target": "LGV acoustic system",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "laser_scanner_operation",
+      "type": "OPERATIONAL",
+      "properties": {
+        "name": "Laser Scanner Operation Check",
+        "description": "Monitoring of navigation and safety laser scanners during LGV operation",
+        "frequency": "daily",
+        "duration": "ongoing",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "System",
+      "target": "LGV laser scanners",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "laser_safety_check",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Laser Device Safety Inspection",
+        "description": "Inspection of laser devices including navigation scanners, safety scanners, equipment lasers and photocells for proper covers and safety compliance",
+        "frequency": "daily",
+        "duration": "15 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "safety_inspector",
+      "target": "laser_systems",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "hydraulic_inspection",
+      "type": "MAINTENANCE",
+      "properties": {
+        "name": "Hydraulic System Check",
+        "description": "Inspection of hydraulic circuits and pipes on lifting unit, electrical panel and equipment sides",
+        "frequency": "weekly",
+        "duration": "30 minutes",
+        "safety_level": "medium",
+        "domain": "hardware"
+      },
+      "actor": "maintenance_technician",
+      "target": "hydraulic_system",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "operating_area_check",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Operating Area Safety Check",
+        "description": "Inspection of LGV operating area ensuring 2m clearance and checking for mechanical hazards like impact, crushing, falling objects risks",
+        "frequency": "daily",
+        "duration": "20 minutes",
+        "safety_level": "high",
+        "domain": "environmental"
+      },
+      "actor": "safety_inspector",
+      "target": "lgv_operating_area",
+      "temporal_order": 3,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "hydraulic_safety_check",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Hydraulic Safety System Verification",
+        "description": "Verification of safety valves that prevent uncontrolled vertical/horizontal movements and falling in case of piping damage or oil leaks",
+        "frequency": "monthly",
+        "duration": "30 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "maintenance technician",
+      "target": "hydraulic system safety valves",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "aunder theequipment. -Area aroundthe LGV ata distanceof less than2 m.-Pipes and hydrau-lic component..."
+    },
+    {
+      "id": "oil_pressure_check",
+      "type": "MAINTENANCE",
+      "properties": {
+        "name": "Oil Pressure Safety Check",
+        "description": "Inspection of safety valve that limits oil overpressure on hydraulic circuit",
+        "frequency": "monthly",
+        "duration": "15 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "maintenance technician",
+      "target": "hydraulic pressure system",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "aunder theequipment. -Area aroundthe LGV ata distanceof less than2 m.-Pipes and hydrau-lic component..."
+    },
+    {
+      "id": "lgv_safety_check",
+      "type": "SAFETY",
+      "properties": {
+        "name": "LGV Safety Device Inspection",
+        "description": "Verify functionality of safety devices that detect persons and obstacles in LGV operating area",
+        "frequency": "daily",
+        "duration": "30 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "maintenance personnel",
+      "target": "LGV safety sensors",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "ircuit. -Maintenance instruc-tions are described inchap. 8. Maintenance. -Personnel must betrained i..."
+    },
+    {
+      "id": "personnel_training",
+      "type": "OPERATIONAL",
+      "properties": {
+        "name": "LGV Operation Training",
+        "description": "Personnel must be trained in use and maintenance of the LGV",
+        "frequency": "as_needed",
+        "duration": "8 hours",
+        "safety_level": "high",
+        "domain": "human"
+      },
+      "actor": "training instructor",
+      "target": "maintenance personnel",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "ircuit. -Maintenance instruc-tions are described inchap. 8. Maintenance. -Personnel must betrained i..."
+    },
+    {
+      "id": "speed_reduction_obstacles",
+      "type": "OPERATIONAL",
+      "properties": {
+        "name": "Speed Reduction for Obstacle Areas",
+        "description": "Vehicle speed is automatically decreased when obstacle detection area needs to be reduced or disabled",
+        "frequency": "as_needed",
+        "duration": "immediate",
+        "safety_level": "high",
+        "domain": "software"
+      },
+      "actor": "LGV Control System",
+      "target": "LGV Movement Speed",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "emergency_stop_activation",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Emergency Stop Activation",
+        "description": "Emergency stop devices (buttons, ropes) can be activated to stop machine in dangerous situations",
+        "frequency": "as_needed",
+        "duration": "immediate",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "Operator",
+      "target": "LGV Power System",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "power_cutoff_emergency",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Emergency Chain Power Cutoff",
+        "description": "Activation of emergency chain devices cuts off power supply to motors",
+        "frequency": "as_needed",
+        "duration": "immediate",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "Emergency Chain System",
+      "target": "LGV Motors",
+      "temporal_order": 3,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "safety_zone_violation",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Safety Zone Violation Check",
+        "description": "Person entering vehicle travel path without maintaining minimum stopping distance",
+        "frequency": "as_needed",
+        "duration": "immediate",
+        "safety_level": "high",
+        "domain": "environmental"
+      },
+      "actor": "Safety Personnel",
+      "target": "LGV Operating Area",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "obstacle_detection_disabled",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Obstacle Detection System Status",
+        "description": "Safety devices for obstacle detection are disabled or detection areas reduced during operations",
+        "frequency": "as_needed",
+        "duration": "varies",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "Maintenance Personnel",
+      "target": "LGV Sensor Systems",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "loading_station_check",
+      "type": "OPERATIONAL",
+      "properties": {
+        "name": "Loading Station Operation Check",
+        "description": "Verification of safe pallet transfer operations between vehicle and station",
+        "frequency": "daily",
+        "duration": "10 minutes",
+        "safety_level": "medium",
+        "domain": "operational"
+      },
+      "actor": "Operations Personnel",
+      "target": "Loading/Unloading Stations",
+      "temporal_order": 3,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "safety_check_enclosed_areas",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Enclosed Area Safety Check",
+        "description": "Verify escape routes in enclosed areas where LGV operates",
+        "frequency": "daily",
+        "duration": "10 minutes",
+        "safety_level": "high",
+        "domain": "environmental"
+      },
+      "actor": "Safety Inspector",
+      "target": "LGV Operating Environment",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "safety_sensor_inspection",
+      "type": "DIAGNOSTIC",
+      "properties": {
+        "name": "Safety Sensor Field Check",
+        "description": "Inspect safety sensors detection field (20cm height parallel to floor)",
+        "frequency": "daily",
+        "duration": "15 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "Maintenance Technician",
+      "target": "LGV Safety Sensors",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "battery_compartment_check",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Battery System Inspection",
+        "description": "Check battery compartment and electrical components for fire/explosion risks",
+        "frequency": "weekly",
+        "duration": "30 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "Maintenance Technician",
+      "target": "LGV Battery System",
+      "temporal_order": 3,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "emergency_stop_activation",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Emergency Stop Activation",
+        "description": "Activation of emergency stop devices (buttons, ropes) to stop LGV in dangerous situations",
+        "frequency": "as_needed",
+        "duration": "immediate",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "operator",
+      "target": "LGV",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "battery_charging_inspection",
+      "type": "MAINTENANCE",
+      "properties": {
+        "name": "Battery Charging Station Inspection",
+        "description": "Inspection of electrical contacts, wiring and movable arm at charging stations",
+        "frequency": "monthly",
+        "duration": "30 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "maintenance_technician",
+      "target": "charging_station",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "electrical_contact_cleaning",
+      "type": "MAINTENANCE",
+      "properties": {
+        "name": "Electrical Contact Cleaning",
+        "description": "Removal of dust and mechanical deterioration from electrical contacts",
+        "frequency": "monthly",
+        "duration": "15 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "maintenance_technician",
+      "target": "electrical_contacts",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "emergency_stop_activation",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Emergency Stop System Activation",
+        "description": "Activation of emergency devices (buttons, ropes) to cut power supply to motors in dangerous situations",
+        "frequency": "as_needed",
+        "duration": "immediate",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "operator",
+      "target": "LGV motors",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "battery_charging_safety",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Battery Charging Safety Protocol",
+        "description": "Safety measures during battery charging to prevent electrocution and handle hot surfaces",
+        "frequency": "daily",
+        "duration": "varies",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "authorized_personnel",
+      "target": "LGV battery system",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "workplace_access_control",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Workplace Access Control",
+        "description": "Access restriction to authorized personnel only with barriers and visitor escort requirements",
+        "frequency": "daily",
+        "duration": "continuous",
+        "safety_level": "high",
+        "domain": "environmental"
+      },
+      "actor": "authorized_personnel",
+      "target": "LGV operation area",
+      "temporal_order": 3,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "lgv_speed_control",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Speed and Position Control Check",
+        "description": "Speed control and position control based on redundant system checks to stop LGV if encoder and navigation errors occur",
+        "frequency": "as_needed",
+        "duration": "continuous",
+        "safety_level": "high",
+        "domain": "software"
+      },
+      "actor": "control_system",
+      "target": "lgv_movement",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "electrical_contact_inspection",
+      "type": "MAINTENANCE",
+      "properties": {
+        "name": "Electrical Contact Inspection",
+        "description": "Check for insulation issues on electrical contacts due to dust or mechanical deterioration",
+        "frequency": "monthly",
+        "duration": "30_minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "maintenance_technician",
+      "target": "electrical_contacts",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "battery_temperature_monitoring",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Battery Temperature Monitoring",
+        "description": "Ensure batteries are not exposed to temperatures above 45°C or fire",
+        "frequency": "continuous",
+        "duration": "continuous",
+        "safety_level": "high",
+        "domain": "environmental"
+      },
+      "actor": "monitoring_system",
+      "target": "lgv_batteries",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "speed_control_check",
+      "type": "DIAGNOSTIC",
+      "properties": {
+        "name": "Speed and Position Control System Check",
+        "description": "Redundant system checks to verify encoder and navigation system errors",
+        "frequency": "as_needed",
+        "duration": "5-10 minutes",
+        "safety_level": "high",
+        "domain": "software"
+      },
+      "actor": "System Controller",
+      "target": "LGV Navigation System",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "safety_sensor_inspection",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Safety Sensor Field Verification",
+        "description": "Check safety detection field at 20cm height parallel to floor for obstacle detection",
+        "frequency": "daily",
+        "duration": "15 minutes",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "Maintenance Technician",
+      "target": "LGV Safety Sensors",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "emergency_stop_test",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Emergency Stop Distance Verification",
+        "description": "Verify sufficient stopping distance considering vehicle inertia and curved paths",
+        "frequency": "weekly",
+        "duration": "30 minutes",
+        "safety_level": "high",
+        "domain": "operational"
+      },
+      "actor": "Safety Engineer",
+      "target": "LGV Braking System",
+      "temporal_order": 3,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "manual_speed_limit",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Manual Operation Speed Limit",
+        "description": "Maximum speed is limited when LGVs are manually operated with operator panel",
+        "frequency": "as_needed",
+        "duration": "during manual operation",
+        "safety_level": "high",
+        "domain": "operational"
+      },
+      "actor": "operator",
+      "target": "LGV speed control",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "deadman_button",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Dead Man Button Operation",
+        "description": "Confirmation buttons that immediately stop LGV when pressed or released during manual control",
+        "frequency": "as_needed",
+        "duration": "immediate",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "operator",
+      "target": "LGV emergency stop",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "authorized_maintenance",
+      "type": "MAINTENANCE",
+      "properties": {
+        "name": "Authorized Personnel Maintenance",
+        "description": "Manual and maintenance operations restricted to authorized personnel only",
+        "frequency": "as_needed",
+        "duration": "varies",
+        "safety_level": "high",
+        "domain": "human"
+      },
+      "actor": "authorized maintenance personnel",
+      "target": "LGV maintenance",
+      "temporal_order": 3,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "manual_movement_safety",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Manual Movement Safety Check",
+        "description": "Risk of impact, crush, entrapment of person positioned too close to LGV during manual movement",
+        "frequency": "as_needed",
+        "duration": "ongoing",
+        "safety_level": "high",
+        "domain": "human"
+      },
+      "actor": "Operator",
+      "target": "LGV manual operation",
+      "temporal_order": 1,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    },
+    {
+      "id": "charging_tower_safety",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Charging Station Safety Protocol",
+        "description": "Risk of mechanical impact, tripping, falling around charging tower and station area",
+        "frequency": "as_needed",
+        "duration": "ongoing",
+        "safety_level": "high",
+        "domain": "environmental"
+      },
+      "actor": "Personnel",
+      "target": "Charging station area",
+      "temporal_order": 2,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    },
+    {
+      "id": "electrical_radiation_check",
+      "type": "SAFETY",
+      "properties": {
+        "name": "Electrical Safety Check",
+        "description": "Electrical and radiation safety measures within 75cm from charging tower center",
+        "frequency": "as_needed",
+        "duration": "ongoing",
+        "safety_level": "high",
+        "domain": "hardware"
+      },
+      "actor": "Maintenance Personnel",
+      "target": "Charging tower power supply",
+      "temporal_order": 3,
+      "prerequisites": [],
+      "concepts": [],
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "restricted_access_control",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Restricted Access Control",
+        "description": "Only authorized personnel allowed in work areas, visitors must be accompanied",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "workplace safety",
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "electrical_isolation",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Electrical Isolation Protection",
+        "description": "Electrical equipment protected by covers that require special tools to access",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "electrical safety",
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "qualified_commissioning",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Qualified Commissioning Process",
+        "description": "System commissioning performed only by qualified manufacturer personnel",
+        "importance": "critical",
+        "domain": "human"
+      },
+      "applies_to": [],
+      "domain": "system deployment",
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "electrical_hazard_awareness",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Electrical Hazard Awareness",
+        "description": "Recognition of direct/indirect electrical contact risks and hot surface dangers",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "electrical safety",
+      "source_chunk": "ontacts,battery com-partment,electricalpanel, elec-trical cables,hot surfaces,motorisedwheel, allpow..."
+    },
+    {
+      "id": "authorized_access_control",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Authorized Access Control",
+        "description": "Restricted access to live electrical components through specific tools and authorized personnel only",
+        "importance": "critical",
+        "domain": "human"
+      },
+      "applies_to": [],
+      "domain": "electrical safety",
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "warning_labeling",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Safety Warning Systems",
+        "description": "Clear marking and labeling of electrical hazards on equipment and panels",
+        "importance": "high",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "workplace safety",
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "thermal_protection",
+      "type": "TECHNICAL_CONCEPTS",
+      "properties": {
+        "name": "Thermal Protection Limits",
+        "description": "Temperature threshold monitoring and protection for batteries (45°C limit)",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "battery systems",
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "contact_isolation",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Electrical Contact Protection",
+        "description": "Physical covering and clear identification of electrical contacts on equipment",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "electrical safety",
+      "source_chunk": "tections of live partscan only be opened withspecific tools by authori - sed personnel. -Presence of..."
+    },
+    {
+      "id": "hazard_identification",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Hazard Zone Identification",
+        "description": "Systematic identification of dangerous areas and associated risks including mechanical, electrical, thermal, and chemical hazards",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "industrial safety",
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "operational_risk_assessment",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Operational Risk Assessment",
+        "description": "Evaluation of risks during specific operational phases including commissioning, testing, and normal operation",
+        "importance": "high",
+        "domain": "human"
+      },
+      "applies_to": [],
+      "domain": "risk management",
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "equipment_failure_modes",
+      "type": "FAILURE_PATTERNS",
+      "properties": {
+        "name": "Equipment Failure Modes",
+        "description": "Analysis of potential equipment malfunctions and damage scenarios affecting electrical and mechanical systems",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "reliability engineering",
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "contact_safety",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Contact Safety Management",
+        "description": "Prevention of accidents from direct contact with electrical equipment and moving mechanical parts",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "electrical safety",
+      "source_chunk": "ng RiskDangerous areaRisk description Risk mitigation Residual risk During commissio - ning operatio..."
+    },
+    {
+      "id": "authorized_access_control",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Restricted Area Access Control",
+        "description": "Workplace must be delimited and access restricted to authorized personnel only, with visitors requiring qualified escort",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "workplace safety",
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "mandatory_operator_training",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Manufacturer Training Requirement",
+        "description": "Operators must receive formal training from manufacturer personnel before operating equipment",
+        "importance": "critical",
+        "domain": "human"
+      },
+      "applies_to": [],
+      "domain": "operational safety",
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "emergency_stop_system",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Emergency Stop Mechanisms",
+        "description": "Equipment must have accessible emergency stop devices that cut power to motors when activated",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "machine safety",
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "equipment_protection",
+      "type": "TECHNICAL_CONCEPTS",
+      "properties": {
+        "name": "Electrical Equipment Protection",
+        "description": "Electrical components must be protected by specific covers to prevent access and damage",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "electrical safety",
+      "source_chunk": "io - ned in front ofthe charger andthe charger armmoving towardsthe LGV; -on LGV in opera-tion.-Comm..."
+    },
+    {
+      "id": "thermal_protection",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Thermal Protection Limits",
+        "description": "Maintaining battery temperature below 45°C to prevent fire and damage",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "battery safety",
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "crush_prevention",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Crush Prevention",
+        "description": "Protection against body part crushing during automated movements",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "mechanical safety",
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "electrical_isolation",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Electrical Contact Protection",
+        "description": "Covering and marking electrical contacts to prevent accidental contact",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "electrical safety",
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "escape_route_requirement",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Escape Route Access",
+        "description": "Maintaining clear escape routes in automated vehicle operational areas",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "facility safety",
+      "source_chunk": "mentis protected by specificcovers. -Avoid exposing the bat - teries to fire or tempera-tures above ..."
+    },
+    {
+      "id": "restricted_area_access",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Restricted Area Access Control",
+        "description": "Only authorized and trained personnel allowed in dangerous/restricted areas",
+        "importance": "critical",
+        "domain": "human"
+      },
+      "applies_to": [],
+      "domain": "industrial safety",
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "speed_reduction_hazard",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Hazard Speed Reduction",
+        "description": "Automatic speed reduction to 0.3 m/s with warning signals in hazardous conditions",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "automated vehicles",
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "safety_zone_demarcation",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Safety Zone Demarcation",
+        "description": "Physical and visual marking of dangerous areas with warnings and signs",
+        "importance": "high",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "workplace safety",
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "clearance_monitoring",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Equipment Clearance Monitoring",
+        "description": "Monitoring and controlling minimum clearance (0.5m) between vehicles and fixed structures",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "industrial automation",
+      "source_chunk": "eratingarea with noescape ro-utes on thesides of theLGV route.-When LGVs moveclose to fixedstructure..."
+    },
+    {
+      "id": "acoustic_warning_signals",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Acoustic Warning System",
+        "description": "Use of adjustable acoustic signals to warn of equipment motion and emergency stops",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "industrial_safety",
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "operator_attention_management",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Operator Attention Management",
+        "description": "Addressing reduced attention span due to overconfidence in automated systems",
+        "importance": "high",
+        "domain": "human"
+      },
+      "applies_to": [],
+      "domain": "human_factors",
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "laser_safety_management",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Laser Safety Management",
+        "description": "Management of risks associated with laser radiation from navigation and safety scanners",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "laser_safety",
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "operational_noise_control",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Operational Noise Management",
+        "description": "Control and mitigation of operational noise to prevent discomfort and loss of attention",
+        "importance": "high",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "industrial_safety",
+      "source_chunk": "3-EN_C Safety and functioning RiskDangerous areaRisk description Risk mitigation Residual risk Durin..."
+    },
+    {
+      "id": "laser_safety",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Laser Safety Protocol",
+        "description": "Safety principles for handling and working around laser devices, including beam exposure prevention and classification awareness",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "industrial safety",
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "mechanical_hazard_zones",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Mechanical Hazard Zone Awareness",
+        "description": "Identification and management of areas with mechanical risks including impact, crushing, stored energy, and falling objects",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "industrial safety",
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "equipment_clearance",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Equipment Operating Clearance",
+        "description": "Maintaining safe operating distances and clearance zones around automated equipment",
+        "importance": "high",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "industrial operations",
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "hydraulic_system_safety",
+      "type": "TECHNICAL_CONCEPTS",
+      "properties": {
+        "name": "Hydraulic System Management",
+        "description": "Understanding and managing hydraulic circuits, components, and associated risks in industrial equipment",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "mechanical systems",
+      "source_chunk": "on.-Operatingarea of themachines.Laser deviceson LGVs(navigationlaser scan-ners, safetylaser scan-ne..."
+    },
+    {
+      "id": "safety_zone_clearance",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Safety Zone Maintenance",
+        "description": "Maintaining safe distance (2m) around equipment during operation and maintenance",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "industrial safety",
+      "source_chunk": "aunder theequipment. -Area aroundthe LGV ata distanceof less than2 m.-Pipes and hydrau-lic component..."
+    },
+    {
+      "id": "pressure_system_safety",
+      "type": "TECHNICAL_CONCEPTS",
+      "properties": {
+        "name": "Pressurized System Safety",
+        "description": "Management of pressurized hydraulic systems and associated risks",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "hydraulic systems",
+      "source_chunk": "aunder theequipment. -Area aroundthe LGV ata distanceof less than2 m.-Pipes and hydrau-lic component..."
+    },
+    {
+      "id": "failsafe_hydraulics",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Hydraulic Failsafe Mechanisms",
+        "description": "Safety valve systems preventing uncontrolled movement during failures",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "hydraulic safety",
+      "source_chunk": "aunder theequipment. -Area aroundthe LGV ata distanceof less than2 m.-Pipes and hydrau-lic component..."
+    },
+    {
+      "id": "personnel_qualification",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Personnel Training Requirements",
+        "description": "Mandatory training for maintenance personnel",
+        "importance": "high",
+        "domain": "human"
+      },
+      "applies_to": [],
+      "domain": "workforce safety",
+      "source_chunk": "aunder theequipment. -Area aroundthe LGV ata distanceof less than2 m.-Pipes and hydrau-lic component..."
+    },
+    {
+      "id": "slip_hazard_management",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Slip Hazard Control",
+        "description": "Management of slip hazards from oil leaks",
+        "importance": "high",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "workplace safety",
+      "source_chunk": "aunder theequipment. -Area aroundthe LGV ata distanceof less than2 m.-Pipes and hydrau-lic component..."
+    },
+    {
+      "id": "personnel_training",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Personnel Training Requirement",
+        "description": "Personnel must be properly trained in equipment use and maintenance procedures",
+        "importance": "critical",
+        "domain": "human"
+      },
+      "applies_to": [],
+      "domain": "operational safety",
+      "source_chunk": "ircuit. -Maintenance instruc-tions are described inchap. 8. Maintenance. -Personnel must betrained i..."
+    },
+    {
+      "id": "hazard_zones",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Hazard Zone Identification",
+        "description": "Identification and marking of dangerous areas around equipment with specific distance requirements",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "workplace safety",
+      "source_chunk": "ircuit. -Maintenance instruc-tions are described inchap. 8. Maintenance. -Personnel must betrained i..."
+    },
+    {
+      "id": "maintenance_hazards",
+      "type": "MAINTENANCE_CONCEPTS",
+      "properties": {
+        "name": "Maintenance Risk Awareness",
+        "description": "Recognition of specific hazards during maintenance including impacts, crushing, falling objects and oil ejection",
+        "importance": "high",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "maintenance safety",
+      "source_chunk": "ircuit. -Maintenance instruc-tions are described inchap. 8. Maintenance. -Personnel must betrained i..."
+    },
+    {
+      "id": "safety_systems",
+      "type": "TECHNICAL_CONCEPTS",
+      "properties": {
+        "name": "Safety Device Systems",
+        "description": "Implementation of detection systems for personnel and obstacles in equipment operation zones",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "safety systems",
+      "source_chunk": "ircuit. -Maintenance instruc-tions are described inchap. 8. Maintenance. -Personnel must betrained i..."
+    },
+    {
+      "id": "safety_zone_management",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Safety Zone Management",
+        "description": "Dynamic adjustment of safety areas based on operational context and programmable zones",
+        "importance": "critical",
+        "domain": "software"
+      },
+      "applies_to": [],
+      "domain": "autonomous vehicles",
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "speed_safety_correlation",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Speed-Safety Correlation",
+        "description": "Automatic speed reduction when safety detection zones need modification",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "motion control",
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "emergency_power_cutoff",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Emergency Power Cutoff",
+        "description": "Immediate power interruption to motors upon emergency system activation",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "power systems",
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "access_control",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Workplace Access Control",
+        "description": "Physical barriers and authorization requirements to restrict access to operational areas",
+        "importance": "high",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "facility management",
+      "source_chunk": " operatingconditions.-LGVs are equipped withsafety devices to detectpersons and obstaclesin the main..."
+    },
+    {
+      "id": "access_control",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Access Control and Authorization",
+        "description": "Restricting area access to authorized personnel and requiring visitor supervision",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "facility safety",
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "stopping_distance",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Vehicle Stopping Distance Management",
+        "description": "Maintaining adequate stopping distance for vehicles considering inertia and curves",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "vehicle operations",
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "safety_device_integrity",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Safety Device Functionality",
+        "description": "Maintaining operational integrity of obstacle detection systems",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "equipment safety",
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "transfer_point_safety",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Loading Station Safety",
+        "description": "Managing risks at pallet transfer points between vehicles and stations",
+        "importance": "high",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "material handling",
+      "source_chunk": " - rally demarcated by bar - riers. Access is limited toauthorised persons only. -Visitors must be a..."
+    },
+    {
+      "id": "hazard_zone_assessment",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Hazardous Area Assessment",
+        "description": "Systematic evaluation of dangerous areas around automated equipment including escape routes and physical obstacles",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "industrial safety",
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "multi_hazard_protection",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Multi-Hazard Protection",
+        "description": "Comprehensive protection against multiple risk types including mechanical, electrical, thermal, and chemical hazards",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "safety systems",
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "sensor_limitation_awareness",
+      "type": "TECHNICAL_CONCEPTS",
+      "properties": {
+        "name": "Safety Sensor Limitations",
+        "description": "Understanding physical limitations of safety sensors including detection field constraints and blind spots",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "sensor systems",
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "operational_mode_safety",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Operational Mode Safety",
+        "description": "Safety considerations across different operational modes including automatic and manual operation",
+        "importance": "critical",
+        "domain": "operational"
+      },
+      "applies_to": [],
+      "domain": "industrial automation",
+      "source_chunk": "icle and the station (on the ground or onconveyors); -the machine is inenclosed areas wherethe only ..."
+    },
+    {
+      "id": "emergency_stop_safety",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Emergency Stop Mechanism",
+        "description": "Critical safety feature requiring accessible emergency stop devices to immediately halt machine operation in dangerous situations",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "industrial_safety",
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "electrical_contact_hazard",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Electrical Contact Protection",
+        "description": "Prevention of direct contact with electrical components during charging operations",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "electrical_safety",
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "contact_deterioration",
+      "type": "FAILURE_PATTERNS",
+      "properties": {
+        "name": "Contact Surface Degradation",
+        "description": "Progressive deterioration of electrical contacts due to dust and mechanical wear affecting insulation properties",
+        "importance": "high",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "electrical_maintenance",
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "charging_operation_safety",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Battery Charging Safety Protocol",
+        "description": "Systematic approach to safe battery charging operations including positioning and connection procedures",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "battery_management",
+      "source_chunk": "LGV: batteryand bat - tery com-partment;electrical pa - nel; electricalequipment;motorisedwheel -Bat..."
+    },
+    {
+      "id": "emergency_power_cutoff",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Emergency Power Interruption",
+        "description": "Immediate power cutoff to motors when emergency devices are activated",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "electrical safety",
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "access_control",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Restricted Area Access",
+        "description": "Limited access to authorized personnel and supervised visitor policy",
+        "importance": "high",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "workplace safety",
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "electrical_isolation",
+      "type": "TECHNICAL_CONCEPTS",
+      "properties": {
+        "name": "Electrical Equipment Protection",
+        "description": "Use of protective covers for electrical equipment",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "electrical safety",
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "charging_hazards",
+      "type": "FAILURE_PATTERNS",
+      "properties": {
+        "name": "Battery Charging Risks",
+        "description": "Potential hazards during charging including electrocution, fire, and hot surfaces",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "battery systems",
+      "source_chunk": "opera-tors to stop the machinein potentially dangeroussituations. -Activation of the devicesthat are..."
+    },
+    {
+      "id": "redundant_safety_control",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Redundant System Safety Controls",
+        "description": "Implementation of redundant system checks for speed and position control to ensure automated system safety",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "automated guided vehicles",
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "electrical_insulation_degradation",
+      "type": "FAILURE_PATTERNS",
+      "properties": {
+        "name": "Electrical Contact Insulation Deterioration",
+        "description": "Progressive degradation of electrical contact insulation due to dust accumulation and mechanical wear",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "electrical systems",
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "thermal_safety_limits",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Temperature Exposure Limits",
+        "description": "Maintaining operational temperatures below critical thresholds to prevent equipment damage and safety hazards",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "battery systems",
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "safety_perimeter",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Safety Distance Maintenance",
+        "description": "Maintaining minimum safety distances around moving equipment to prevent accidents",
+        "importance": "critical",
+        "domain": "human"
+      },
+      "applies_to": [],
+      "domain": "workplace safety",
+      "source_chunk": "lectrocution, fire,explosion, hot surfacesduring battery chargingoperations, in case ofmalfunction o..."
+    },
+    {
+      "id": "redundant_system_monitoring",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Redundant System Monitoring",
+        "description": "Using multiple systems (encoder and navigation) to verify vehicle operation and trigger stops on error detection",
+        "importance": "critical",
+        "domain": "software"
+      },
+      "applies_to": [],
+      "domain": "autonomous vehicles",
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "emergency_stop_distance",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Emergency Stop Distance Management",
+        "description": "Maintaining adequate stopping distance accounting for vehicle inertia and path curvature",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "vehicle safety",
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "sensor_detection_limitations",
+      "type": "TECHNICAL_CONCEPTS",
+      "properties": {
+        "name": "Sensor Detection Limitations",
+        "description": "Understanding planar safety sensor limitations at fixed heights for obstacle detection",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "sensor systems",
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "confined_space_operation",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Confined Space Operation",
+        "description": "Managing vehicle operation in enclosed areas with limited escape routes",
+        "importance": "high",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "workplace safety",
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "load_stability",
+      "type": "FAILURE_PATTERNS",
+      "properties": {
+        "name": "Load Stability Management",
+        "description": "Ensuring transported items remain stable during vehicle operation",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "material handling",
+      "source_chunk": "-Speed control andposition control basedon redundant systemchecks to stop the LGV ifencoder and navi..."
+    },
+    {
+      "id": "safety_perimeter",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Safety Detection Field",
+        "description": "Planar detection zone parallel to floor at specified height to prevent collisions",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "automated vehicle safety",
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "speed_limitation",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Manual Speed Restriction",
+        "description": "Maximum speed limits enforced during manual operation mode",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "vehicle control",
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "deadman_switch",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Dead Man Control",
+        "description": "Confirmation buttons that stop vehicle when released or pressed",
+        "importance": "critical",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "safety controls",
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "authorized_maintenance",
+      "type": "MAINTENANCE_CONCEPTS",
+      "properties": {
+        "name": "Authorized Personnel Only",
+        "description": "Restriction of maintenance operations to trained and authorized staff",
+        "importance": "high",
+        "domain": "human"
+      },
+      "applies_to": [],
+      "domain": "maintenance management",
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "safety_distance",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Minimum Safety Distance",
+        "description": "Required minimum separation distance from moving equipment",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "workplace safety",
+      "source_chunk": "the safety de-tection field is planarand parallel to the floorat a height of 20 cm). During the manu..."
+    },
+    {
+      "id": "hazard_zone_demarcation",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Hazard Zone Demarcation",
+        "description": "Clear marking and signaling of dangerous areas around equipment to prevent accidents",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "industrial safety",
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    },
+    {
+      "id": "safe_distance_maintenance",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Safe Distance Maintenance",
+        "description": "Maintaining specified safety distances from operational equipment to prevent accidents",
+        "importance": "critical",
+        "domain": "human"
+      },
+      "applies_to": [],
+      "domain": "operational safety",
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    },
+    {
+      "id": "movement_speed_control",
+      "type": "OPERATIONAL_PRINCIPLES",
+      "properties": {
+        "name": "Movement Speed Control",
+        "description": "Control of equipment movement speed during manual operation to prevent accidents and product damage",
+        "importance": "high",
+        "domain": "hardware"
+      },
+      "applies_to": [],
+      "domain": "equipment operation",
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    },
+    {
+      "id": "electrical_safety_zone",
+      "type": "SAFETY_PRINCIPLES",
+      "properties": {
+        "name": "Electrical Safety Zone",
+        "description": "Maintaining safe distances from electrical charging equipment to prevent electrical hazards",
+        "importance": "critical",
+        "domain": "environmental"
+      },
+      "applies_to": [],
+      "domain": "electrical safety",
+      "source_chunk": "sed personnel. -Operator training.-Impact, crush, en - trapment of a personpositioned too close toth..."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "battery_compartment",
+      "target": "hot_surfaces",
+      "type": "CAUSES",
+      "properties": {
+        "context": "Battery usage and charging causes hot surfaces on machine",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "qualified_personnel",
+      "target": "site_commissioning",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "Commissioning must be performed by qualified personnel",
+        "confidence": "high",
+        "domain": "human"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "electrical_access_control",
+      "target": "qualified_personnel",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "Electrical equipment access restricted to authorized personnel",
+        "confidence": "high",
+        "domain": "safety"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "visitor_control",
+      "target": "qualified_personnel",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "Visitors must be accompanied by qualified personnel",
+        "confidence": "high",
+        "domain": "human"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "electrical_cables",
+      "target": "electrical_panel",
+      "type": "PART_OF",
+      "properties": {
+        "context": "Electrical cables are part of electrical panel system",
+        "confidence": "medium",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "electrical_panels",
+      "target": "authorized_personnel",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "electrical panels can only be accessed by authorized personnel",
+        "confidence": "high",
+        "domain": "human"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "batteries",
+      "target": "max_temperature",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "batteries must not exceed 45°C temperature limit",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "electrical_panels",
+      "target": "specific_tools",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "specific tools needed to open electrical panels",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "battery_chargers",
+      "target": "burns",
+      "type": "CAUSES",
+      "properties": {
+        "context": "hot surfaces on battery chargers can cause burns",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "max_temperature",
+      "target": "battery_temp_monitoring",
+      "type": "TRIGGERS",
+      "properties": {
+        "context": "temperature limits trigger battery monitoring requirements",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "battery_compartment",
+      "target": "electrocution",
+      "type": "CAUSES",
+      "properties": {
+        "context": "battery wiring and charging operations can lead to electrocution",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "charger_arm",
+      "target": "crushing",
+      "type": "CAUSES",
+      "properties": {
+        "context": "charger arm movement towards LGV can cause crushing hazard",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "battery_wiring_check",
+      "target": "hazard_identification",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "safety check during battery wiring to identify hazards",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "charging_test",
+      "target": "contact_safety",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "charging operations require electrical contact safety measures",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "charger_arm_positioning",
+      "target": "operational_risk_assessment",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "positioning of charger arm requires risk assessment",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "qualified_personnel",
+      "target": "commissioning_check",
+      "type": "PERFORMS",
+      "properties": {
+        "context": "Commissioning is performed by qualified personnel of manufacturer on site",
+        "confidence": "high",
+        "domain": "human"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "emergency_stop_button",
+      "target": "emergency_stop_system",
+      "type": "PART_OF",
+      "properties": {
+        "context": "Emergency stop buttons are part of emergency chain system",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "emergency_rope",
+      "target": "emergency_stop_system",
+      "type": "PART_OF",
+      "properties": {
+        "context": "Emergency ropes are part of emergency chain system",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "emergency_stop_activation",
+      "target": "emergency_stop_system",
+      "type": "TRIGGERS",
+      "properties": {
+        "context": "Activation of emergency devices triggers the emergency stop system",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "qualified_personnel",
+      "target": "operator_training",
+      "type": "PERFORMS",
+      "properties": {
+        "context": "Operators must be trained by manufacturer's personnel",
+        "confidence": "high",
+        "domain": "human"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "high_temperature",
+      "target": "batteries",
+      "type": "CAUSES",
+      "properties": {
+        "context": "Risk of battery fire when exposed to high temperatures",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "temp_45c",
+      "target": "batteries",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Temperature threshold of 45°C for battery safety",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "battery_charger_arm",
+      "target": "crushing",
+      "type": "CAUSES",
+      "properties": {
+        "context": "Battery charger arm movement can cause crushing of body parts",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "battery_charger_arm",
+      "target": "electrical_contacts",
+      "type": "PART_OF",
+      "properties": {
+        "context": "Charger arm moves towards electrical contacts for charging",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "thermal_protection",
+      "target": "batteries",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Thermal protection principles for battery safety",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "obstacle_detection",
+      "target": "lgv_speed_reduction",
+      "type": "TRIGGERS",
+      "properties": {
+        "context": "Disabled/partial obstacle detection triggers speed reduction",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "lgv_speed_reduction",
+      "target": "warning_signals",
+      "type": "TRIGGERS",
+      "properties": {
+        "context": "Speed reduction activates acoustic and visual signals",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "authorized_personnel",
+      "target": "restricted_area_access",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "Only trained and authorized personnel can access restricted areas",
+        "confidence": "high",
+        "domain": "human"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "safety_clearance",
+      "target": "lgv_speed_reduction",
+      "type": "TRIGGERS",
+      "properties": {
+        "context": "Clearance less than 0.5m triggers speed reduction",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "acoustic_signal",
+      "target": "noise_discomfort",
+      "type": "CAUSES",
+      "properties": {
+        "context": "Acoustic signals from LGV can cause noise discomfort and stress",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "noise_discomfort",
+      "target": "reduced_attention",
+      "type": "CAUSES",
+      "properties": {
+        "context": "Noise discomfort leads to reduced attention span",
+        "confidence": "medium",
+        "domain": "human"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "acoustic_signal",
+      "target": "operating_area",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Acoustic signals are active in the operating area of machines",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "laser_scanner_nav",
+      "target": "operating_area",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Laser navigation scanners operate in the machine area",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "laser_scanner_safety",
+      "target": "operating_area",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Safety laser scanners operate in the machine area",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "navigation_laser_scanner",
+      "target": "operating_area",
+      "type": "PART_OF",
+      "properties": {
+        "context": "Laser devices including navigation scanners are part of machine operating area",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "safety_laser_scanner",
+      "target": "laser_safety",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Safety laser scanners are subject to laser safety principles",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "visible_laser",
+      "target": "laser_safety_check",
+      "type": "TRIGGERS",
+      "properties": {
+        "context": "Presence of visible laser beams triggers safety checks",
+        "confidence": "medium",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "hydraulic_circuit",
+      "target": "mechanical_hazard_zones",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Hydraulic circuit and pipes are subject to mechanical hazard considerations",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "safety_distance",
+      "target": "equipment_clearance",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "2m safety distance relates to equipment clearance requirements",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "hydraulic_valves",
+      "target": "oil_leak",
+      "type": "PREVENTS",
+      "properties": {
+        "context": "Valves stop uncontrolled falling in case of oil leaks",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "oil_leak",
+      "target": "safety_perimeter",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "Oil leak risks require maintaining safe distance of 2m",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "hydraulic_pipes",
+      "target": "oil_leak",
+      "type": "CAUSES",
+      "properties": {
+        "context": "Damaged pipes can cause oil leaks",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "slip_hazard_management",
+      "target": "oil_leak",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Slippery floor hazard from oil leaks requires management",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "hydraulic_safety_check",
+      "target": "oil_pressure_check",
+      "type": "HAPPENS_BEFORE",
+      "properties": {
+        "context": "Safety inspection precedes pressure system checks",
+        "confidence": "medium",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "slippery_floor",
+      "target": "maintenance_hazards",
+      "type": "PART_OF",
+      "properties": {
+        "context": "Falls caused by slippery floor are part of maintenance hazards",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "personnel_training",
+      "target": "maintenance_personnel",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Personnel must be trained in use and maintenance",
+        "confidence": "high",
+        "domain": "human"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "lgv_safety_devices",
+      "target": "safety_systems",
+      "type": "PART_OF",
+      "properties": {
+        "context": "LGVs are equipped with safety devices to detect persons and obstacles",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "safety_distance",
+      "target": "hazard_zones",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Work area of machines around moving LGV at distance of less than 2m",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "safety_devices",
+      "target": "speed_reduction",
+      "type": "CAUSES",
+      "properties": {
+        "context": "Safety devices trigger speed reduction when obstacle detection area needs to be reduced",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "emergency_stop",
+      "target": "power_cutoff_emergency",
+      "type": "TRIGGERS",
+      "properties": {
+        "context": "Emergency stop activation cuts off power supply to motors",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "operators",
+      "target": "emergency_stop_activation",
+      "type": "TRIGGERS",
+      "properties": {
+        "context": "Operators can activate emergency stop in dangerous situations",
+        "confidence": "high",
+        "domain": "human"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "barriers",
+      "target": "access_control",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Barriers are used to limit access to authorized persons",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "emergency_stop",
+      "target": "safety_devices",
+      "type": "PART_OF",
+      "properties": {
+        "context": "Emergency stop buttons and ropes are part of safety devices",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "authorized_personnel",
+      "target": "access_control",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Access is limited to authorized persons only",
+        "confidence": "high",
+        "domain": "human"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "stopping_distance",
+      "target": "impact_risk",
+      "type": "PREVENTS",
+      "properties": {
+        "context": "Minimum stopping distance needed to prevent impact with persons",
+        "confidence": "high",
+        "domain": "operational"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "obstacle_detection_disabled",
+      "target": "loading_station",
+      "type": "HAPPENS_BEFORE",
+      "properties": {
+        "context": "Detection areas reduced at loading/unloading stations",
+        "confidence": "high",
+        "domain": "operational"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "safety_devices",
+      "target": "safety_device_integrity",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "Safety devices must maintain integrity to check for obstacles",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "loading_station_check",
+      "target": "transfer_point_safety",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Safety checks during pallet transfer operations",
+        "confidence": "high",
+        "domain": "operational"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "safety_sensors",
+      "target": "crushing",
+      "type": "PREVENTS",
+      "properties": {
+        "context": "safety sensors detect obstacles to prevent crushing hazards",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "sensor_height",
+      "target": "safety_sensors",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "safety detection field is planar and parallel to floor at 20cm height",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "electrical_panel",
+      "target": "electrocution",
+      "type": "CAUSES",
+      "properties": {
+        "context": "electrical panel poses electrocution risk during operation",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "lgv_battery",
+      "target": "battery_compartment_check",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "battery requires safety inspection of compartment",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "dust_buildup",
+      "target": "electrical_contacts",
+      "type": "CAUSES",
+      "properties": {
+        "context": "dust causes deterioration and increased electrical insulation on contacts",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "battery",
+      "target": "battery_compartment",
+      "type": "PART_OF",
+      "properties": {
+        "context": "battery is housed within battery compartment",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "electrical_contact_cleaning",
+      "target": "contact_deterioration",
+      "type": "PREVENTS",
+      "properties": {
+        "context": "cleaning prevents contact deterioration",
+        "confidence": "high",
+        "domain": "maintenance"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "emergency_stop_activation",
+      "target": "motorized_wheel",
+      "type": "FIXES",
+      "properties": {
+        "context": "emergency stop halts motorized wheel operation",
+        "confidence": "high",
+        "domain": "safety"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "charging_operation_safety",
+      "target": "electrical_contacts",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "safety principles apply to electrical contacts during charging",
+        "confidence": "high",
+        "domain": "safety"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "emergency_buttons",
+      "target": "emergency_stop_activation",
+      "type": "TRIGGERS",
+      "properties": {
+        "context": "Emergency buttons activate emergency stop chain",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "emergency_ropes",
+      "target": "emergency_stop_activation",
+      "type": "TRIGGERS",
+      "properties": {
+        "context": "Emergency ropes activate emergency stop chain",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "emergency_stop_activation",
+      "target": "emergency_power_cutoff",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Emergency stop cuts off power to motors",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "battery_charger_arm",
+      "target": "crushing_hazard",
+      "type": "CAUSES",
+      "properties": {
+        "context": "Battery charger arm movement can cause crushing of fingers/arms",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "electrical_contacts",
+      "target": "electrocution_hazard",
+      "type": "CAUSES",
+      "properties": {
+        "context": "Electrical contacts during charging can pose electrocution risk",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "workplace_access_control",
+      "target": "access_control",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Workplace barriers and authorization requirements implement access control",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "guidance_system",
+      "target": "uncontrolled_movement",
+      "type": "CAUSES",
+      "properties": {
+        "context": "guidance system errors lead to uncontrolled LGV movement",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "lgv_speed_control",
+      "target": "uncontrolled_movement",
+      "type": "PREVENTS",
+      "properties": {
+        "context": "speed control and position control prevent uncontrolled movement",
+        "confidence": "high",
+        "domain": "software"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "work_area",
+      "target": "safety_distance",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "work area requires safety distance of less than 2m around moving LGV",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "battery_temperature_monitoring",
+      "target": "max_temperature",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "temperature monitoring applies to max temperature limit of 45°C",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "electrical_contact_inspection",
+      "target": "electrical_contacts",
+      "type": "DIAGNOSES",
+      "properties": {
+        "context": "inspection diagnoses insulation issues on electrical contacts",
+        "confidence": "medium",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "encoder",
+      "target": "system_error",
+      "type": "CAUSES",
+      "properties": {
+        "context": "encoder errors can cause system errors requiring LGV to stop",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "navigation_system",
+      "target": "system_error",
+      "type": "CAUSES",
+      "properties": {
+        "context": "navigation system errors can cause system errors requiring LGV to stop",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "safety_sensors",
+      "target": "sensor_height",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "safety sensors operate at 20cm height from floor",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "confined_space_operation",
+      "target": "enclosed_area",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "special safety considerations for LGV operation in enclosed areas",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "redundant_system_monitoring",
+      "target": "speed_control_check",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "speed control requires redundant system monitoring",
+        "confidence": "high",
+        "domain": "software"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "safety_detection_field",
+      "target": "detection_height",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "safety detection field must be at height of 20cm",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "operator_panel",
+      "target": "manual_speed_limit",
+      "type": "TRIGGERS",
+      "properties": {
+        "context": "maximum speed is limited when manually operated with operator panel",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "deadman_button",
+      "target": "impact_crushing",
+      "type": "PREVENTS",
+      "properties": {
+        "context": "deadman buttons stop LGV to prevent accidents",
+        "confidence": "high",
+        "domain": "safety"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "authorized_personnel",
+      "target": "authorized_maintenance",
+      "type": "REQUIRES",
+      "properties": {
+        "context": "maintenance operations can only be performed by authorized personnel",
+        "confidence": "high",
+        "domain": "human"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "work_area",
+      "target": "safety_perimeter",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "safety perimeter applies to work area around moving LGV",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "charging_tower",
+      "target": "impact_crush",
+      "type": "CAUSES",
+      "properties": {
+        "context": "Impact risk around charging tower while LGV waiting",
+        "confidence": "high",
+        "domain": "hardware"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "hazard_zone_demarcation",
+      "target": "charging_tower_safety",
+      "type": "APPLIES_TO",
+      "properties": {
+        "context": "Charging tower signals floor highlighting dangerous area",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "movement_speed_control",
+      "target": "falling_product",
+      "type": "PREVENTS",
+      "properties": {
+        "context": "Fast movements causing product falling during manual movement",
+        "confidence": "high",
+        "domain": "operational"
+      },
+      "temporal_info": {}
+    },
+    {
+      "source": "charging_distance",
+      "target": "electrical_safety_zone",
+      "type": "DEFINES",
+      "properties": {
+        "context": "75cm distance from charging tower center defines safety zone",
+        "confidence": "high",
+        "domain": "environmental"
+      },
+      "temporal_info": {}
+    }
+  ]
+}

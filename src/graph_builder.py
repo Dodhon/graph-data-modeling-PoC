@@ -69,11 +69,27 @@ class ManualGraphBuilder:
         text = re.sub(r'\s+', ' ', text)
         return text.strip()
     
-    def extract_graph_from_chunks(self, chunks: List[str], save_every: int = 100) -> List[EECGraphDocument]:
-        """Extract EEC graph documents from text chunks with periodic saving"""
+    def extract_graph_from_chunks(self, chunks: List[str], save_every: int = 100, start_chunk: int = 0) -> List[EECGraphDocument]:
+        """Extract EEC graph documents from text chunks with periodic saving
+        
+        Args:
+            chunks: List of text chunks to process
+            save_every: Save progress every N chunks
+            start_chunk: Starting chunk index (default: 0)
+        """
         all_eec_docs = []
         
-        for i, chunk in enumerate(chunks):
+        # Validate start_chunk
+        if start_chunk < 0:
+            raise ValueError(f"start_chunk must be non-negative, got {start_chunk}")
+        if start_chunk >= len(chunks):
+            raise ValueError(f"start_chunk {start_chunk} is beyond total chunks {len(chunks)}")
+        
+        if start_chunk > 0:
+            print(f"⚡ Skipping first {start_chunk} chunks, starting from chunk {start_chunk+1}")
+        
+        for i in range(start_chunk, len(chunks)):
+            chunk = chunks[i]
             print(f"Processing chunk {i+1}/{len(chunks)}")
             try:
                 documents = [Document(page_content=chunk, metadata={"chunk_id": i, "source": "manual"})]
@@ -410,8 +426,14 @@ class ManualGraphBuilder:
             "schemas": schemas
         }
 
-    def build_graph_from_manual(self, file_path: str, max_lines: int = None) -> Dict[str, Any]:
-        """Main method to build knowledge graph from manual"""
+    def build_graph_from_manual(self, file_path: str, max_lines: int = None, start_chunk: int = 0) -> Dict[str, Any]:
+        """Main method to build knowledge graph from manual
+        
+        Args:
+            file_path: Path to the manual text file
+            max_lines: Optional limit on number of lines to process
+            start_chunk: Starting chunk index (default: 0)
+        """
         print("Reading manual file...")
         with open(file_path, 'r', encoding='utf-8') as f:
             if max_lines:
@@ -432,8 +454,28 @@ class ManualGraphBuilder:
         chunks = self.chunk_document(clean_text)
         print(f"Created {len(chunks)} chunks")
         
+        # Validate start_chunk parameter
+        if start_chunk < 0:
+            raise ValueError(f"start_chunk must be non-negative, got {start_chunk}")
+        if start_chunk >= len(chunks):
+            print(f"⚠️  Warning: start_chunk {start_chunk} >= total chunks {len(chunks)}")
+            print("Nothing to process.")
+            return {
+                "total_chunks": len(chunks),
+                "total_eec_documents": 0,
+                "total_entities": 0,
+                "total_events": 0,
+                "total_concepts": 0,
+                "total_relationships": 0,
+                "eec_documents": [],
+                "temporal_patterns": {"diagnostic_sequences": [], "causal_chains": [], 
+                                    "prerequisite_graphs": [], "conditional_logic": []},
+                "schemas": {"entity_hierarchies": [], "event_patterns": [], 
+                           "concept_networks": [], "domain_schemas": []}
+            }
+        
         print("Extracting EEC graph elements...")
-        eec_docs = self.extract_graph_from_chunks(chunks)
+        eec_docs = self.extract_graph_from_chunks(chunks, start_chunk=start_chunk)
         
         # Graph already stored incrementally during processing
         

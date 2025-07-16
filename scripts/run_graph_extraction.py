@@ -4,11 +4,20 @@ Simple runner script to extract knowledge graph from E80 manual
 """
 
 import os
+import argparse
 from dotenv import load_dotenv
 from src.graph_builder import ManualGraphBuilder
 
 def main():
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description="Extract knowledge graph from E80 manual")
+    parser.add_argument("--start-chunk", type=int, default=0, 
+                       help="Starting chunk index (default: 0)")
+    args = parser.parse_args()
+    
     print("🚀 Starting Knowledge Graph Extraction from E80 Manual")
+    if args.start_chunk > 0:
+        print(f"📍 Starting from chunk {args.start_chunk}")
     
     # Load environment variables
     load_dotenv()
@@ -38,7 +47,7 @@ def main():
     
     try:
         # Build the graph from entire manual
-        result = builder.build_graph_from_manual(manual_path)
+        result = builder.build_graph_from_manual(manual_path, start_chunk=args.start_chunk)
         
         # Print results
         print("\n✅ EEC Graph extraction completed!")
