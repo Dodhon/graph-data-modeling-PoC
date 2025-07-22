@@ -1,0 +1,5783 @@
+{
+  "diagnostic_sequences": [],
+  "causal_chains": [],
+  "prerequisite_graphs": [
+    {
+      "event_id": "electrical_access_control",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "site_commissioning",
+      "prerequisites": [
+        "qualified_personnel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "electrical_panel_access",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "emergency_stop_activation",
+      "prerequisites": [
+        "safety_cone_placement"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "restricted_area_access",
+      "prerequisites": [
+        "authorized_personnel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_device_monitoring",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_scanner_operation",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_check",
+      "prerequisites": [
+        "laser_system",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "hydraulic_inspection",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "hydraulic_safety_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "oil_pressure_check",
+      "prerequisites": [
+        "hydraulic_safety_check"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_safety_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "emergency_stop_activation",
+      "prerequisites": [
+        "safety_cone_placement"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "obstacle_detection_disabled",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_sensor_inspection",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_compartment_check",
+      "prerequisites": [
+        "lgv_battery"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "emergency_stop_activation",
+      "prerequisites": [
+        "safety_cone_placement"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "emergency_stop_activation",
+      "prerequisites": [
+        "safety_cone_placement"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_charging_safety",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "speed_control_check",
+      "prerequisites": [
+        "redundant_system_monitoring"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_sensor_inspection",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "authorized_maintenance",
+      "prerequisites": [
+        "authorized_personnel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "electrical_radiation_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_sign_inspection",
+      "prerequisites": [
+        "safety_signs"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_sign_replacement",
+      "prerequisites": [
+        "damaged_signs"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_sign_inspection",
+      "prerequisites": [
+        "safety_signs"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_sign_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_charging_warning",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "conveyor_safety",
+      "prerequisites": [
+        "conveyor"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_sign_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_safety_check",
+      "prerequisites": [
+        "batteries",
+        "electrical_hazard_awareness"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_check",
+      "prerequisites": [
+        "laser_system",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_check",
+      "prerequisites": [
+        "laser_system",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_safety_inspection",
+      "prerequisites": [
+        "batteries"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_charging_safety",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_check",
+      "prerequisites": [
+        "laser_system",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_safety_warning",
+      "prerequisites": [
+        "batteries",
+        "batteries"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "fork_safety_protocol",
+      "prerequisites": [
+        "lgv_forks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_safety_warning",
+      "prerequisites": [
+        "batteries",
+        "batteries"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_handling",
+      "prerequisites": [
+        "batteries"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_safety_warning_1",
+      "prerequisites": [
+        "lgv_vehicle",
+        "vehicle_forks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety",
+      "prerequisites": [
+        "laser_system"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_safety_check",
+      "prerequisites": [
+        "batteries",
+        "electrical_hazard_awareness"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "fork_safety_protocol",
+      "prerequisites": [
+        "lgv_forks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_standing_restriction",
+      "prerequisites": [
+        "lgv_forks",
+        "lgv_forks",
+        "lgv_forks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_standing_restriction",
+      "prerequisites": [
+        "lgv_forks",
+        "lgv_forks",
+        "lgv_forks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_safety_warning",
+      "prerequisites": [
+        "batteries",
+        "batteries"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_safety_warning",
+      "prerequisites": [
+        "batteries",
+        "batteries"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_no_standing_lgv",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_no_standing_forks",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_standing_restriction",
+      "prerequisites": [
+        "lgv_forks",
+        "lgv_forks",
+        "lgv_forks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "conveyor_safety",
+      "prerequisites": [
+        "conveyor"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "no_water_fire",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "no_operation_without_guards",
+      "prerequisites": [
+        "machine_guards"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "high_voltage_warning",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_voltage_warning",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_safety_check",
+      "prerequisites": [
+        "batteries",
+        "electrical_hazard_awareness"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_battery_safety_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_inspection",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_warning",
+      "prerequisites": [
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "voltage_warning",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_safety_warning",
+      "prerequisites": [
+        "batteries",
+        "batteries"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "hazardous_voltage_warning",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "platform_access_restriction",
+      "prerequisites": [
+        "protective_platform"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_check",
+      "prerequisites": [
+        "laser_system",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_safety_check",
+      "prerequisites": [
+        "laser_system",
+        "laser_beam"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "fire_safety_power_cutoff",
+      "prerequisites": [
+        "fire_electrical"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "fire_extinguisher_selection",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "fire_extinguisher_co2",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "battery_temp_monitoring",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_safety_valve_operation",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "screw_tightening_check",
+      "prerequisites": [
+        "electrical_connection_integrity"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "breathing_apparatus",
+      "prerequisites": [
+        "battery_fire"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "charging_connection",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_handling",
+      "prerequisites": [
+        "batteries"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lu_area_clearance",
+      "prerequisites": [
+        "fire_door_tipper_activation"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lift_fire_doors",
+      "prerequisites": [
+        "reset_alarms"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "restore_auto_operation",
+      "prerequisites": [
+        "lift_fire_doors",
+        "battery_shutdown"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "cell_vapor_detection",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "ppe_requirement",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "ppe_equipment_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "ppe_requirement",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "mobile_panel_disconnect",
+      "prerequisites": [
+        "safety_device_unpair",
+        "emergency_button_deactivation"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "disconnect_mobile_panel",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "pair_safety_devices_type1",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "unpair_safety_devices_type1",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "pair_safety_devices_type2",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "unpair_safety_devices_type2",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "disconnect_panel_agv",
+      "prerequisites": [
+        "connect_panel_agv"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "nav_error_adjustment",
+      "prerequisites": [
+        "navigation_status_monitoring",
+        "verify_layer_accuracy"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_param_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "sonar_param_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "sonar_param_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "pallet_inspection",
+      "prerequisites": [
+        "pallet_handling"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "error_code_analysis",
+      "prerequisites": [
+        "error_codes"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "operator_panel_association",
+      "prerequisites": [
+        "mobile_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "confirm_alarm_message",
+      "prerequisites": [
+        "operator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_bypass",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "panel_pairing",
+      "prerequisites": [
+        "mobile_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_device_unpair",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_device_unpair",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "physical_pairing",
+      "prerequisites": [
+        "usb_token"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "connect_mobile_panel",
+      "prerequisites": [
+        "mobile_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "power_on_panel",
+      "prerequisites": [
+        "connect_mobile_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "stop_button_initialization",
+      "prerequisites": [
+        "token_insertion"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "panel_reconnection",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "panel_disconnect_store",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "wait_for_disconnect",
+      "prerequisites": [
+        "remove_token"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_auto_mode",
+      "prerequisites": [
+        "visual_pairing_op_x5",
+        "verify_load_status",
+        "verify_load_status",
+        "system_reentry"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "panel_charging",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "connect_panel_type1",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "connect_panel_type2",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "disconnect_panel_type1",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "disconnect_panel_type2",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "wifi_connection",
+      "prerequisites": [
+        "wireless_operator_panel",
+        "agv_selection",
+        "update_vehicle_list"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_device_pairing",
+      "prerequisites": [
+        "wifi_connection"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "mobile_panel_disconnect",
+      "prerequisites": [
+        "safety_device_unpair",
+        "emergency_button_deactivation"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_device_unpair",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "emergency_button_deactivation",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "disconnect_wifi_panel",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "charge_wireless_panel",
+      "prerequisites": [
+        "disconnect_wifi_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "select_connect_agv",
+      "prerequisites": [
+        "panel_settings_config"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_device_pairing",
+      "prerequisites": [
+        "wifi_connection"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "press_flash_button",
+      "prerequisites": [
+        "count_door_flashes"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "disconnect_mobile_panel",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "press_p2p3_buttons",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "unpair_device",
+      "prerequisites": [
+        "press_emergency_button"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "panel_charging",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "connect_operator_panel",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "disconnect_operator_panel",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "connect_bypass_plug",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "bypass_plug_connection",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "emergency_bypass",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_bypass_check",
+      "prerequisites": [
+        "safety_bypass_control"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "l1_auth",
+      "prerequisites": [
+        "machine_operator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lift_param_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "lift_pressure_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "e80_group_access",
+      "prerequisites": [
+        "system_connectivity"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_drive",
+      "prerequisites": [
+        "secure_area",
+        "manual_operation_mode"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_drive",
+      "prerequisites": [
+        "secure_area",
+        "manual_operation_mode"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_drive",
+      "prerequisites": [
+        "secure_area",
+        "manual_operation_mode"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_area_delimitation",
+      "prerequisites": [
+        "safety_cones"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_sensor_parameters",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "verify_position_sync",
+      "prerequisites": [
+        "position_sensor"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mast_operation",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "tilt_mast_manual",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "pressure_sensor_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "pressure_sensor_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "position_sync_verification",
+      "prerequisites": [
+        "position_sensor"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "fork_position_check",
+      "prerequisites": [
+        "independent_forks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "fork_position_check",
+      "prerequisites": [
+        "independent_forks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "monitor_encoder_position",
+      "prerequisites": [
+        "encoder"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "adjust_movement_speed",
+      "prerequisites": [
+        "speed_setting"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "monitor_encoder_position",
+      "prerequisites": [
+        "encoder"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "adjust_movement_speed",
+      "prerequisites": [
+        "speed_setting"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_stabilizer_adjustment",
+      "prerequisites": [
+        "load_stabiliser"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "position_monitoring",
+      "prerequisites": [
+        "encoders"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "monitor_encoder_position",
+      "prerequisites": [
+        "encoder"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "adjust_movement_speed",
+      "prerequisites": [
+        "speed_setting"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "adjust_speed_setting",
+      "prerequisites": [
+        "speed_setting"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "monitor_encoder_position",
+      "prerequisites": [
+        "encoder"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "adjust_speed_setting",
+      "prerequisites": [
+        "speed_setting"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "adjust_speed_setting",
+      "prerequisites": [
+        "speed_setting"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "monitor_encoder_position",
+      "prerequisites": [
+        "encoder"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_element_move",
+      "prerequisites": [
+        "communication_loss"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_reinsertion",
+      "prerequisites": [
+        "safe_work_area_check"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "fixed_panel_diagnostics",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "navigate_operator_interface",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "nav_error_adjustment",
+      "prerequisites": [
+        "navigation_status_monitoring",
+        "verify_layer_accuracy"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_diagnostics",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "nav_status_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "nav_sensor_check",
+      "prerequisites": [
+        "navigation_sensors"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "nav_quality_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "lgv_initialization",
+      "prerequisites": [
+        "reflectors",
+        "area_security_check"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_nav_quality",
+      "prerequisites": [
+        "nav_quality_indicator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "position_jump_acceptance",
+      "prerequisites": [
+        "operator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "layout_layer_check",
+      "prerequisites": [
+        "layer_localization"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "globloc_localization",
+      "prerequisites": [
+        "globloc"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_globlock_login_check",
+      "prerequisites": [
+        "machine_operator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_laser_parameters",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "pgv_camera_diagnostic",
+      "prerequisites": [
+        "pgv_cameras"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "pgv_camera_diagnostic",
+      "prerequisites": [
+        "pgv_cameras"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "pgv_position_parameter_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "sensor_measurement_validation",
+      "prerequisites": [
+        "side_sensors"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "sonar_parameter_check",
+      "prerequisites": [
+        "navigation_sonars"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "reflector_mapping",
+      "prerequisites": [
+        "map_reflectors"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "load_status_update",
+      "prerequisites": [
+        "operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_muting_verification",
+      "prerequisites": [
+        "station_muting_verification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "maintenance_tools_access",
+      "prerequisites": [
+        "lgv_maintenance_tools"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "maintenance_navigation",
+      "prerequisites": [
+        "maintenance_mode_activation"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "sensor_parameter_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "check_working_cycles",
+      "prerequisites": [
+        "working_cycles_monitor"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_obstacle_camera",
+      "prerequisites": [
+        "obstacle_detection_camera"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_power_on_panel",
+      "prerequisites": [
+        "startup_sequence"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_power_off_battery",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_loto",
+      "prerequisites": [
+        "lgv_power_off_panel",
+        "sequential_shutdown",
+        "lgv_extended_stop"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "auto_mode_activation",
+      "prerequisites": [
+        "wireless_panel_disconnect",
+        "auto_restart_activation",
+        "lgv_manager",
+        "pls_retraction",
+        "load_verification",
+        "load_status_verification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "raise_mast_manual",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "tilt_mast_manual",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "open_close_equipment",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "manual_lms_movement",
+      "prerequisites": [
+        "manual_mode_operation"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "complete_maintenance",
+      "prerequisites": [
+        "fixed_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "diagnostic_tools",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "active_alarms_check",
+      "prerequisites": [
+        "diagnostic_tools",
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "alarm_history_check",
+      "prerequisites": [
+        "diagnostic_tools",
+        "fixed_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_bypass",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_lifting",
+      "prerequisites": [
+        "lifting_jack",
+        "lifting_jack"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_towing",
+      "prerequisites": [
+        "towing_device"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "lgv_towing_removal",
+      "prerequisites": [
+        "towing_device"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "lgv_startup_single",
+      "prerequisites": [
+        "safety_check",
+        "operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_position_recognition",
+      "prerequisites": [
+        "system_insertion"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_cone_placement",
+      "prerequisites": [
+        "manual_mode_activation"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "power_up_disconnectors",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "connect_battery",
+      "prerequisites": [
+        "remove_padlock_block",
+        "disconnect_power"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "remove_padlock",
+      "prerequisites": [
+        "padlock"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "disconnect_power",
+      "prerequisites": [
+        "remove_padlock"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "connect_battery",
+      "prerequisites": [
+        "remove_padlock_block",
+        "disconnect_power"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "power_up_lgv",
+      "prerequisites": [
+        "connect_battery"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_safety_positioning",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_localization",
+      "prerequisites": [
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_initialization",
+      "prerequisites": [
+        "reflectors",
+        "area_security_check"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_selection",
+      "prerequisites": [
+        "delimit_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "operator_login",
+      "prerequisites": [
+        "operator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "nav_status_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "manual_mode_localization",
+      "prerequisites": [
+        "navigation_laser_head",
+        "man_auto_selector"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "access_globloc",
+      "prerequisites": [
+        "switch_to_manual"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "confirm_position",
+      "prerequisites": [
+        "verify_position_match"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "position_visibility_check",
+      "prerequisites": [
+        "position_display"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_nav_quality",
+      "prerequisites": [
+        "nav_quality_indicator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "relocate_lgv",
+      "prerequisites": [
+        "check_nav_quality"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_layer_input",
+      "prerequisites": [
+        "autolayer_disable"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_nav_quality",
+      "prerequisites": [
+        "nav_quality_indicator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "relocate_lgv",
+      "prerequisites": [
+        "check_nav_quality"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_manual_mode_move",
+      "prerequisites": [
+        "operator",
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_movement",
+      "prerequisites": [
+        "secure_area",
+        "connect_wireless"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "connect_mobile_panel",
+      "prerequisites": [
+        "mobile_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_localization_check",
+      "prerequisites": [
+        "lgv_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "direction_selection",
+      "prerequisites": [
+        "segment_search"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_repositioning",
+      "prerequisites": [
+        "auto_insertion_position"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "wireless_panel_disconnect",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "auto_mode_activation",
+      "prerequisites": [
+        "wireless_panel_disconnect",
+        "auto_restart_activation",
+        "lgv_manager",
+        "pls_retraction",
+        "load_verification",
+        "load_status_verification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "auto_restart_activation",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "auto_mode_activation",
+      "prerequisites": [
+        "wireless_panel_disconnect",
+        "auto_restart_activation",
+        "lgv_manager",
+        "pls_retraction",
+        "load_verification",
+        "load_status_verification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "auto_restart_safety_clear",
+      "prerequisites": [
+        "restart_delay"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_restart_high_risk",
+      "prerequisites": [
+        "risk_based_restart"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_distance_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "place_safety_cones",
+      "prerequisites": [
+        "disable_station"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_area_halt",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "reactivate_operation",
+      "prerequisites": [
+        "reset_alarms"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "emergency_stop_activation",
+      "prerequisites": [
+        "safety_cone_placement"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "emergency_stop_reset",
+      "prerequisites": [
+        "emergency_stop_activation",
+        "emergency_stop"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "emergency_stop_activation",
+      "prerequisites": [
+        "safety_cone_placement"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "emergency_stop_release",
+      "prerequisites": [
+        "emergency_stop_usage"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_shutdown",
+      "prerequisites": [
+        "three_second_press"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_disconnect",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "main_power_disconnect",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_connector_removal",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_disconnect",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_loto",
+      "prerequisites": [
+        "lgv_power_off_panel",
+        "sequential_shutdown",
+        "lgv_extended_stop"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "apply_switch_cover",
+      "prerequisites": [
+        "cover_plate",
+        "lgv_switch_off"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "apply_padlock",
+      "prerequisites": [
+        "padlock",
+        "apply_switch_cover",
+        "lock_connector"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "apply_padlock",
+      "prerequisites": [
+        "padlock",
+        "apply_switch_cover",
+        "lock_connector"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "apply_padlock",
+      "prerequisites": [
+        "padlock",
+        "apply_switch_cover",
+        "lock_connector"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "apply_warning_signs",
+      "prerequisites": [
+        "maintenance_signs"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_loto",
+      "prerequisites": [
+        "lgv_power_off_panel",
+        "sequential_shutdown",
+        "lgv_extended_stop"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safe_machine_approach",
+      "prerequisites": [
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_intervention",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_safety_cones",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "cone_stop_verification",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "area_delimitation",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_operational_stop",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "delimit_safety_area",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "remove_safety_cones",
+      "prerequisites": [
+        "delimit_safety_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "place_safety_cones",
+      "prerequisites": [
+        "disable_station"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "remove_safety_cones",
+      "prerequisites": [
+        "delimit_safety_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "enable_station_group",
+      "prerequisites": [
+        "remove_safety_cones"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_operation",
+      "prerequisites": [
+        "reset_alarm"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_cone_placement",
+      "prerequisites": [
+        "manual_mode_activation"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "emergency_stop_activation",
+      "prerequisites": [
+        "safety_cone_placement"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_operation",
+      "prerequisites": [
+        "operator",
+        "prerequisite_knowledge",
+        "pre_operation_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_bubble_activation",
+      "prerequisites": [
+        "navigation_initialization"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_drive",
+      "prerequisites": [
+        "operator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "mobile_panel_connection",
+      "prerequisites": [
+        "mobile_operator_panel",
+        "mobile_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "drive_wheel_sync",
+      "prerequisites": [
+        "manual_mode_activation"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "read_safety_docs",
+      "prerequisites": [
+        "operator"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_surroundings_before_movement",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "check_load_position",
+      "prerequisites": [
+        "check_surrounding_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "area_safety_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "mobile_panel_connection",
+      "prerequisites": [
+        "mobile_operator_panel",
+        "mobile_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_raise",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "manual_lower",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "target_position_reach",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "manual_tilt_activation",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "safety_area_check",
+      "prerequisites": [
+        "manual_tilt_activation"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_surroundings",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "tilt_control",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "pressure_sensor_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "position_sync_monitor",
+      "prerequisites": [
+        "position_sensor"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "load_stabilizer_manual_operation",
+      "prerequisites": [
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_area_check",
+      "prerequisites": [
+        "manual_tilt_activation"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_load_position",
+      "prerequisites": [
+        "check_surrounding_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_mobile_panel",
+      "prerequisites": [
+        "check_area_safety"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "verify_position_sync",
+      "prerequisites": [
+        "position_sensor"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "adjust_movement_speed",
+      "prerequisites": [
+        "speed_setting"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_check_surroundings",
+      "prerequisites": [
+        "safety_first_verification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "mobile_panel_connection",
+      "prerequisites": [
+        "mobile_operator_panel",
+        "mobile_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "fork_reach_target",
+      "prerequisites": [
+        "fork_position_setup"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_fork_control",
+      "prerequisites": [
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_load_position",
+      "prerequisites": [
+        "check_surrounding_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_retraction_operation",
+      "prerequisites": [
+        "manual_mode"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "retract_unit",
+      "prerequisites": [
+        "raise_mast"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_shift_equipment",
+      "prerequisites": [
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "area_safety_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "mobile_panel_connection",
+      "prerequisites": [
+        "mobile_operator_panel",
+        "mobile_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "right_movement",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "left_movement",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "center_position",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "position_monitoring",
+      "prerequisites": [
+        "encoders"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_load_position",
+      "prerequisites": [
+        "check_surrounding_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "set_target_position",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "manual_clamp_operation",
+      "prerequisites": [
+        "manual_mode"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "verify_load_security",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "mobile_panel_connection",
+      "prerequisites": [
+        "mobile_operator_panel",
+        "mobile_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "equipment_movement_control",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "manual_fork_operation",
+      "prerequisites": [
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_mobile_panel",
+      "prerequisites": [
+        "check_area_safety"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "reach_target_position",
+      "prerequisites": [
+        "configure_pallet_properties"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "fork_movement_check",
+      "prerequisites": [
+        "area_safety_check"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lms_manual_mode",
+      "prerequisites": [
+        "manual_mode_prerequisites"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "mobile_panel_connection",
+      "prerequisites": [
+        "mobile_operator_panel",
+        "mobile_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "set_speed_percentage",
+      "prerequisites": [
+        "target_speed"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "navigate_vertical_pls",
+      "prerequisites": [
+        "activate_manual_mode"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "adjust_movement_speed",
+      "prerequisites": [
+        "speed_setting"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "mobile_panel_connection",
+      "prerequisites": [
+        "mobile_operator_panel",
+        "mobile_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "laser_pole_raise",
+      "prerequisites": [
+        "manual_mode_activation"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_check_surroundings",
+      "prerequisites": [
+        "safety_first_verification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "device_horizontal_control",
+      "prerequisites": [
+        "activate_manual_mode"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_check_surroundings",
+      "prerequisites": [
+        "safety_first_verification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_arm_control",
+      "prerequisites": [
+        "safety_prerequisites"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_mobile_panel",
+      "prerequisites": [
+        "check_area_safety"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "set_pusher_position",
+      "prerequisites": [
+        "mobile_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "lgv_path_loss_recovery",
+      "prerequisites": [
+        "prerequisite_knowledge",
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "navigation_monitoring",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "safety_zone_monitoring",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "nav_quality_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lms_position_check",
+      "prerequisites": [
+        "lms_device"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "pantograph_retraction",
+      "prerequisites": [
+        "pantograph"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "reinsert_lgv",
+      "prerequisites": [
+        "retract_pantograph"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "verify_load_status",
+      "prerequisites": [
+        "unstable_load"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_auto_mode",
+      "prerequisites": [
+        "visual_pairing_op_x5",
+        "verify_load_status",
+        "verify_load_status",
+        "system_reentry"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_path_loss_recovery",
+      "prerequisites": [
+        "prerequisite_knowledge",
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_reinsert",
+      "prerequisites": [
+        "path_deviation_stop"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "navigation_quality_monitor",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "place_safety_cones",
+      "prerequisites": [
+        "disable_station"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lower_pallet",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "retract_pls",
+      "prerequisites": [
+        "disengage_forks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "fork_height_adjustment",
+      "prerequisites": [
+        "pls_retraction"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "auto_mode_activation",
+      "prerequisites": [
+        "wireless_panel_disconnect",
+        "auto_restart_activation",
+        "lgv_manager",
+        "pls_retraction",
+        "load_verification",
+        "load_status_verification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "retract_pls",
+      "prerequisites": [
+        "disengage_forks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "verify_load_stability",
+      "prerequisites": [
+        "verify_load_status"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "verify_load_status",
+      "prerequisites": [
+        "unstable_load"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_auto_mode",
+      "prerequisites": [
+        "visual_pairing_op_x5",
+        "verify_load_status",
+        "verify_load_status",
+        "system_reentry"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "auto_mode_activation",
+      "prerequisites": [
+        "wireless_panel_disconnect",
+        "auto_restart_activation",
+        "lgv_manager",
+        "pls_retraction",
+        "load_verification",
+        "load_status_verification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "nav_quality_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lms_device_raise",
+      "prerequisites": [
+        "manual_mode_activation"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "raise_mast",
+      "prerequisites": [
+        "load_pallet_centering"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "retract_unit",
+      "prerequisites": [
+        "raise_mast"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "verify_load_status",
+      "prerequisites": [
+        "unstable_load"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "retract_unit",
+      "prerequisites": [
+        "raise_mast"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "verify_load_status",
+      "prerequisites": [
+        "unstable_load"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "insert_lgv_forward",
+      "prerequisites": [
+        "retract_unit"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_auto_mode",
+      "prerequisites": [
+        "visual_pairing_op_x5",
+        "verify_load_status",
+        "verify_load_status",
+        "system_reentry"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "load_stability_check",
+      "prerequisites": [
+        "fork_height_adjustment"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "load_status_verification",
+      "prerequisites": [
+        "load_stability_check"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "auto_mode_activation",
+      "prerequisites": [
+        "wireless_panel_disconnect",
+        "auto_restart_activation",
+        "lgv_manager",
+        "pls_retraction",
+        "load_verification",
+        "load_status_verification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_reintegration",
+      "prerequisites": [
+        "auto_path_deviation"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "nav_quality_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "manual_reinsertion",
+      "prerequisites": [
+        "nav_failure_stop"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "place_safety_cones",
+      "prerequisites": [
+        "disable_station"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "retract_pls",
+      "prerequisites": [
+        "disengage_forks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "adjust_forks_height",
+      "prerequisites": [
+        "retract_pls"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "fork_height_adjustment",
+      "prerequisites": [
+        "pls_retraction"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "load_status_verification",
+      "prerequisites": [
+        "load_stability_check"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "load_stability_check",
+      "prerequisites": [
+        "fork_height_adjustment"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "verify_load_status",
+      "prerequisites": [
+        "unstable_load"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_auto_mode",
+      "prerequisites": [
+        "visual_pairing_op_x5",
+        "verify_load_status",
+        "verify_load_status",
+        "system_reentry"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "restore_auto_mode",
+      "prerequisites": [
+        "check_layer_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "complete_maintenance",
+      "prerequisites": [
+        "fixed_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "restore_auto_operation",
+      "prerequisites": [
+        "lift_fire_doors",
+        "battery_shutdown"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "delimit_safety_area",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "user_group_change",
+      "prerequisites": [
+        "operator_authentication"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_review",
+      "prerequisites": [
+        "safety_prerequisites"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "auto_disconnect_timeout",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_logout",
+      "prerequisites": [
+        "operator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "panel_login",
+      "prerequisites": [
+        "authentication_system"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "verify_authentication",
+      "prerequisites": [
+        "rfid_authentication"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "operator_panel_logout",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "mobile_panel_language_selection",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "lgv_safety_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "selector_to_auto",
+      "prerequisites": [
+        "selector_to_manual"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "reset_alarm",
+      "prerequisites": [
+        "selector_to_auto"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_operation",
+      "prerequisites": [
+        "reset_alarm"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_removal",
+      "prerequisites": [
+        "frozen_equipment"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_anomaly_inspection",
+      "prerequisites": [
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "load_status_update",
+      "prerequisites": [
+        "operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "status_verification",
+      "prerequisites": [
+        "logical_physical_consistency"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "load_status_update",
+      "prerequisites": [
+        "operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "load_status_page_nav",
+      "prerequisites": [
+        "lgv_man_mode_switch"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "change_load_status",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "save_status_change",
+      "prerequisites": [
+        "change_load_status"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "active_alarms_check",
+      "prerequisites": [
+        "diagnostic_tools",
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_active_alarms",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "alarm_history_check",
+      "prerequisites": [
+        "diagnostic_tools",
+        "fixed_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "wifi_status_check",
+      "prerequisites": [
+        "fixed_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_device_bypass",
+      "prerequisites": [
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_bypass_procedure",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_selection",
+      "prerequisites": [
+        "delimit_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_bypass_unlock",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "hold_confirmation",
+      "prerequisites": [
+        "confirmation_button"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_operation",
+      "prerequisites": [
+        "reset_alarm"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_bypass_lock",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_bypass_check",
+      "prerequisites": [
+        "safety_bypass_control"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_activation",
+      "prerequisites": [
+        "operator_panel_association",
+        "manual_area_delimitation",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "area_safety_check",
+        "mobile_panel_connection",
+        "mobile_panel_connection",
+        "mobile_operator_panel",
+        "safety_check_surroundings",
+        "mobile_operator_connection",
+        "mobile_operator_connection",
+        "path_deviation",
+        "mobile_panel_connect"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "force_encoder_sync",
+      "prerequisites": [
+        "mobile_operator_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_system_removal",
+      "prerequisites": [
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "remove_vehicle",
+      "prerequisites": [
+        "activate_manual_mode"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "power_off_lgv",
+      "prerequisites": [
+        "push_button_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "activate_manual_mode",
+      "prerequisites": [
+        "secure_area",
+        "power_up_lgv",
+        "connect_mobile_panel",
+        "activate_panel_connection",
+        "check_surroundings",
+        "activate_mobile_panel",
+        "check_surroundings",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "connect_operator_panel",
+        "connect_operator_panel",
+        "activate_mobile_panel",
+        "place_safety_cones",
+        "gui_stop_vehicle"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "relocate_vehicle",
+      "prerequisites": [
+        "activate_manual_mode"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "power_off_lgv",
+      "prerequisites": [
+        "push_button_panel"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "relocate_lgv",
+      "prerequisites": [
+        "check_nav_quality"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_relocation",
+      "prerequisites": [
+        "drive_wheel_lift"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "gui_lgv_access",
+      "prerequisites": [
+        "gui_interface"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_system_removal",
+      "prerequisites": [
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_shutdown",
+      "prerequisites": [
+        "three_second_press"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "force_battery_balancing",
+      "prerequisites": [
+        "force_charging_mission",
+        "access_battery_page"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "mobile_panel_battery_charging",
+      "prerequisites": [
+        "charging_base"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "remove_panel_battery",
+      "prerequisites": [
+        "unscrew_panel_battery"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "navigation_jump_check",
+      "prerequisites": [
+        "operator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_mode_selection",
+      "prerequisites": [
+        "delimit_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_localization",
+      "prerequisites": [
+        "prerequisite_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "nav_error_adjustment",
+      "prerequisites": [
+        "navigation_status_monitoring",
+        "verify_layer_accuracy"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_layer_area",
+      "prerequisites": [
+        "verify_layer_accuracy"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "restore_auto_mode",
+      "prerequisites": [
+        "check_layer_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "nav_error_adjustment",
+      "prerequisites": [
+        "navigation_status_monitoring",
+        "verify_layer_accuracy"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "restore_auto_mode",
+      "prerequisites": [
+        "check_layer_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "secure_lifted_machine",
+      "prerequisites": [
+        "pre_operation_knowledge"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "block_wheels",
+      "prerequisites": [
+        "wheel_chocks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "block_wheels",
+      "prerequisites": [
+        "wheel_chocks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lower_equipment",
+      "prerequisites": [
+        "lifting_unit"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "position_jacks",
+      "prerequisites": [
+        "block_wheels",
+        "lifting_point_identification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "place_supports",
+      "prerequisites": [
+        "place_lifting_jacks"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_towing_prep",
+      "prerequisites": [
+        "load_removal_safety"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "lgv_towing_equipment",
+      "prerequisites": [
+        "towing_device",
+        "equipment_requirement_verification"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "lgv_lifting",
+      "prerequisites": [
+        "lifting_jack",
+        "lifting_jack"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "remove_lu",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "turning_procedure",
+      "prerequisites": [
+        "controlled_towing_speed"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "secure_lgv_area",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "install_tow_pins",
+      "prerequisites": [
+        "clean_tow_threads"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "place_towing_pins",
+      "prerequisites": [
+        "lift_lgv_jack"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "align_towing_device",
+      "prerequisites": [
+        "place_towing_pins"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "secure_safety_plug",
+      "prerequisites": [
+        "attach_drawbar"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "manual_battery_replacement",
+      "prerequisites": [
+        "operator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "battery_replacement",
+      "prerequisites": [
+        "operator"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "ppe_requirement",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "initial_fault_analysis",
+      "prerequisites": [
+        "fault_response_workflow"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "access_dangerous_area",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "maintenance_safety_check",
+      "prerequisites": [
+        "dangerous_area"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "emergency_stop_reset",
+      "prerequisites": [
+        "emergency_stop_activation",
+        "emergency_stop"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_cone_placement",
+      "prerequisites": [
+        "manual_mode_activation"
+      ],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "deceleration_adjustment",
+      "prerequisites": [
+        "wrong_deceleration"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": [
+        "specialized_tools_required"
+      ]
+    },
+    {
+      "event_id": "lateral_bumper_obstacle_removal",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "bypass_safety_manual",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "verify_inverter_power",
+      "prerequisites": [
+        "inverter_key"
+      ],
+      "conditions": [],
+      "safety_requirements": [],
+      "tools_required": []
+    },
+    {
+      "event_id": "check_safety_encoder",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "safety_encoder_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    },
+    {
+      "event_id": "speed_comparison_check",
+      "prerequisites": [],
+      "conditions": [],
+      "safety_requirements": [
+        "safety_protocol_required"
+      ],
+      "tools_required": []
+    }
+  ],
+  "conditional_logic": [
+    {
+      "condition": "it is necessary to perform diagnostics",
+      "if_true_action": "m",
+      "if_false_action": "continue_normal_procedure",
+      "context": "connect_operator_panel",
+      "domain": "hardware"
+    },
+    {
+      "condition": "it is necessary to perform diagnostics",
+      "if_true_action": "m",
+      "if_false_action": "continue_normal_procedure",
+      "context": "disconnect_operator_panel",
+      "domain": "hardware"
+    },
+    {
+      "condition": "it is necessary to perform diagnostics",
+      "if_true_action": "m",
+      "if_false_action": "continue_normal_procedure",
+      "context": "connect_bypass_plug",
+      "domain": "hardware"
+    }
+  ]
+}
