@@ -44,7 +44,8 @@ class ManualGraphBuilder:
                 self.graph_db = Neo4jGraph(
                     url=neo4j_uri,
                     username=neo4j_username,
-                    password=neo4j_password
+                    password=neo4j_password,
+                    database=os.getenv("NEO4J_DATABASE")
                 )
             except Exception as e:
                 print(f"Neo4j connection failed: {e}")
@@ -64,9 +65,11 @@ class ManualGraphBuilder:
         text = re.sub(r'--- Page \d+ ---', '', text)
         # Remove line numbers at start
         text = re.sub(r'^\s*\d+→', '', text, flags=re.MULTILINE)
-        # Clean up excessive whitespace
-        text = re.sub(r'\n\s*\n', '\n', text)
-        text = re.sub(r'\s+', ' ', text)
+        # Clean up excessive whitespace while preserving newlines/paragraphs
+        # Collapse runs of spaces/tabs, but keep line breaks
+        text = re.sub(r'[ \t]+', ' ', text)
+        # Collapse 3+ blank lines to a single blank line
+        text = re.sub(r'\n{3,}', '\n\n', text)
         return text.strip()
     
     def extract_graph_from_chunks(self, chunks: List[str], save_every: int = 100, start_chunk: int = 0) -> List[EECGraphDocument]:
@@ -426,13 +429,15 @@ class ManualGraphBuilder:
             "schemas": schemas
         }
 
-    def build_graph_from_manual(self, file_path: str, max_lines: int = None, start_chunk: int = 0) -> Dict[str, Any]:
+    def build_graph_from_manual(self, file_path: str, max_lines: int = None, start_chunk: int = 0, process_temporal_schema: bool = False, save_every: int = 1) -> Dict[str, Any]:
         """Main method to build knowledge graph from manual
         
         Args:
             file_path: Path to the manual text file
             max_lines: Optional limit on number of lines to process
             start_chunk: Starting chunk index (default: 0)
+            process_temporal_schema: Whether to extract temporal patterns and induce schemas (default: False)
+            save_every: Save progress every N chunks (default: 1)
         """
         print("Reading manual file...")
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -475,12 +480,14 @@ class ManualGraphBuilder:
             }
         
         print("Extracting EEC graph elements...")
-        eec_docs = self.extract_graph_from_chunks(chunks, start_chunk=start_chunk)
+        eec_docs = self.extract_graph_from_chunks(chunks, save_every=save_every, start_chunk=start_chunk)
         
         # Graph already stored incrementally during processing
         
-        # Process temporal patterns and schemas
-        temporal_and_schema = self.process_temporal_and_schema(eec_docs)
+        # Process temporal patterns and schemas (optional)
+        temporal_and_schema = None
+        if process_temporal_schema:
+            temporal_and_schema = self.process_temporal_and_schema(eec_docs)
         
         # Return EEC summary statistics
         total_entities = sum(len(doc.entities) for doc in eec_docs)
@@ -496,8 +503,8 @@ class ManualGraphBuilder:
             "total_concepts": total_concepts,
             "total_relationships": total_relationships,
             "eec_documents": eec_docs,
-            "temporal_patterns": temporal_and_schema["temporal_patterns"],
-            "schemas": temporal_and_schema["schemas"]
+            "temporal_patterns": (temporal_and_schema["temporal_patterns"] if temporal_and_schema else None),
+            "schemas": (temporal_and_schema["schemas"] if temporal_and_schema else None)
         }
     
     def export_graph_json(self, graph_docs: List[Any], output_path: str):

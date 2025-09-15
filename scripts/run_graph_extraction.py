@@ -13,6 +13,10 @@ def main():
     parser = argparse.ArgumentParser(description="Extract knowledge graph from E80 manual")
     parser.add_argument("--start-chunk", type=int, default=0, 
                        help="Starting chunk index (default: 0)")
+    parser.add_argument("--with-temporal-schema", action="store_true",
+                       help="Also extract temporal patterns and induce schemas (default: off)")
+    parser.add_argument("--save-every", type=int, default=1,
+                       help="Save progress every N chunks (default: 1)")
     args = parser.parse_args()
     
     print("🚀 Starting Knowledge Graph Extraction from E80 Manual")
@@ -47,7 +51,12 @@ def main():
     
     try:
         # Build the graph from entire manual
-        result = builder.build_graph_from_manual(manual_path, start_chunk=args.start_chunk)
+        result = builder.build_graph_from_manual(
+            manual_path,
+            start_chunk=args.start_chunk,
+            process_temporal_schema=args.with_temporal_schema,
+            save_every=max(1, args.save_every)
+        )
         
         # Print results
         print("\n✅ EEC Graph extraction completed!")
@@ -59,29 +68,32 @@ def main():
         print(f"  - Total concepts extracted: {result['total_concepts']}")
         print(f"  - Total relationships: {result['total_relationships']}")
         
-        # Print temporal patterns summary
-        temporal_patterns = result['temporal_patterns']
-        print(f"\n🔄 Temporal Patterns:")
-        print(f"  - Diagnostic sequences: {len(temporal_patterns['diagnostic_sequences'])}")
-        print(f"  - Causal chains: {len(temporal_patterns['causal_chains'])}")
-        print(f"  - Prerequisite graphs: {len(temporal_patterns['prerequisite_graphs'])}")
-        print(f"  - Conditional logic: {len(temporal_patterns['conditional_logic'])}")
-        
-        # Print schemas summary
-        schemas = result['schemas']
-        print(f"\n🏗️ Schemas:")
-        print(f"  - Entity hierarchies: {len(schemas['entity_hierarchies'])}")
-        print(f"  - Event patterns: {len(schemas['event_patterns'])}")
-        print(f"  - Concept networks: {len(schemas['concept_networks'])}")
-        print(f"  - Domain schemas: {len(schemas['domain_schemas'])}")
+        # Print temporal patterns summary (if computed)
+        if result['temporal_patterns'] is not None:
+            temporal_patterns = result['temporal_patterns']
+            print(f"\n🔄 Temporal Patterns:")
+            print(f"  - Diagnostic sequences: {len(temporal_patterns['diagnostic_sequences'])}")
+            print(f"  - Causal chains: {len(temporal_patterns['causal_chains'])}")
+            print(f"  - Prerequisite graphs: {len(temporal_patterns['prerequisite_graphs'])}")
+            print(f"  - Conditional logic: {len(temporal_patterns['conditional_logic'])}")
+
+        # Print schemas summary (if computed)
+        if result['schemas'] is not None:
+            schemas = result['schemas']
+            print(f"\n🏗️ Schemas:")
+            print(f"  - Entity hierarchies: {len(schemas['entity_hierarchies'])}")
+            print(f"  - Event patterns: {len(schemas['event_patterns'])}")
+            print(f"  - Concept networks: {len(schemas['concept_networks'])}")
+            print(f"  - Domain schemas: {len(schemas['domain_schemas'])}")
         
         # Export to JSON
         if result['eec_documents']:
             output_path = "e80_eec_knowledge_graph.json"
             builder.export_eec_json(result['eec_documents'], output_path)
             print(f"📄 EEC graph exported to: {output_path}")
-            print(f"📄 Temporal patterns exported to: e80_temporal_patterns.json")
-            print(f"📄 Schemas exported to: e80_schemas.json")
+            if args.with_temporal_schema:
+                print(f"📄 Temporal patterns exported to: e80_temporal_patterns.json")
+                print(f"📄 Schemas exported to: e80_schemas.json")
         
     except Exception as e:
         print(f"❌ Error during processing: {e}")

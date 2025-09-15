@@ -1,10 +1,10 @@
 {
-  "processed_chunks": 1099,
-  "total_chunks": 1099,
+  "processed_chunks": 4,
+  "total_chunks": 4,
   "progress_percentage": 100.0,
-  "total_entities": 1954,
-  "total_events": 1207,
-  "total_concepts": 1400,
-  "total_relationships": 1862,
-  "timestamp": "2025-07-16 12:06:01"
+  "total_entities": 22,
+  "total_events": 13,
+  "total_concepts": 15,
+  "total_relationships": 21,
+  "timestamp": "2025-08-27 20:59:05"
 }

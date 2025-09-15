@@ -1,1 +1,0 @@
-"""OpenAI RAG System for E80 Manual"""
