@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Tuple
 
@@ -96,6 +97,7 @@ def _load_json(path: Path) -> Dict[str, Any]:
 def _combine_eec_files(paths: List[Path]) -> Dict[str, Any]:
     nodes: Dict[str, Dict[str, Any]] = {}
     relationships: Dict[Tuple[str, str, str], Dict[str, Any]] = {}
+    combined_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
     for path in paths:
         data = _load_json(path)
@@ -107,6 +109,7 @@ def _combine_eec_files(paths: List[Path]) -> Dict[str, Any]:
                 "source_chunk": entity.get("source_chunk"),
             })
             _merge_properties(properties, extras)
+            _merge_properties(properties, {"combined_at": combined_at})
             _add_node(
                 nodes,
                 entity.get("id"),
@@ -125,6 +128,7 @@ def _combine_eec_files(paths: List[Path]) -> Dict[str, Any]:
                 "source_chunk": event.get("source_chunk"),
             })
             _merge_properties(properties, extras)
+            _merge_properties(properties, {"combined_at": combined_at})
             _add_node(
                 nodes,
                 event.get("id"),
@@ -140,6 +144,7 @@ def _combine_eec_files(paths: List[Path]) -> Dict[str, Any]:
                 "source_chunk": concept.get("source_chunk"),
             })
             _merge_properties(properties, extras)
+            _merge_properties(properties, {"combined_at": combined_at})
             _add_node(
                 nodes,
                 concept.get("id"),
@@ -150,6 +155,7 @@ def _combine_eec_files(paths: List[Path]) -> Dict[str, Any]:
         for rel in data.get("relationships", []):
             properties = _clean_dict(dict(rel.get("properties") or {}))
             temporal_info = _clean_dict(dict(rel.get("temporal_info") or {}))
+            _merge_properties(properties, {"combined_at": combined_at})
             _add_relationship(
                 relationships,
                 rel.get("source"),
