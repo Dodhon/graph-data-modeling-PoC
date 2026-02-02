@@ -52,7 +52,7 @@ PYTHONPATH=. python3 scripts/run_graph_extraction.py \
   --save-every 1
 ```
 
-Defaults read `data/input/E80_manual_text.txt` and export `e80_eec_knowledge_graph.json`. Add `--with-temporal-schema` to also export `e80_temporal_patterns.json` and `e80_schemas.json`.
+Defaults read `data/input/E80_manual_text.txt` and export `data/output/e80_eec_knowledge_graph.json`. Add `--with-temporal-schema` to also export `data/output/e80_temporal_patterns.json` and `data/output/e80_schemas.json`.
 
 ### Option B: Ingest your own file (TXT)
 
@@ -79,13 +79,13 @@ PYTHONPATH=. python3 scripts/pdf_to_text.py \
 
 ## Outputs
 
-- `e80_eec_knowledge_graph.json`: current EEC snapshot (entities, events, concepts, relationships)
-- Progress files during run: `e80_eec_knowledge_graph_progress_<processed>of<total>.json`
-- Progress stats: `e80_eec_knowledge_graph_progress_<...>_stats.json`
-- Final EEC save at end: `e80_eec_knowledge_graph_final.json` (+ `_stats.json`)
+- `data/output/e80_eec_knowledge_graph.json`: current EEC snapshot (entities, events, concepts, relationships)
+- Progress files during run: `data/output/e80_eec_knowledge_graph_progress_<processed>of<total>.json`
+- Progress stats: `data/output/e80_eec_knowledge_graph_progress_<...>_stats.json`
+- Final EEC save at end: `data/output/e80_eec_knowledge_graph_final.json` (+ `_stats.json`)
 - When `--with-temporal-schema` is used:
-  - `e80_temporal_patterns.json`
-  - `e80_schemas.json`
+  - `data/output/e80_temporal_patterns.json`
+  - `data/output/e80_schemas.json`
 
 ## How it works (brief)
 
@@ -111,7 +111,7 @@ graph-data-modeling-PoC/
 ├── data/
 │   ├── input/                      # Place your .txt manuals here
 │   │   └── E80_manual_text.txt     # Included example
-│   └── output/                     # (optional) your own export location
+│   └── output/                     # default export location
 └── requirements.txt                # Python dependencies
 ```
 
@@ -120,3 +120,4 @@ graph-data-modeling-PoC/
 - Neo4j is optional: without it, the pipeline still exports JSON files.
 - To limit processing to a subset, use `--start-chunk` to resume; chunk size/overlap are fixed in `src/graph_builder.py`.
 - Ensure `.env` has `ANTHROPIC_API_KEY` set before running.
+- To move existing root-level JSONs into `data/output/`, run `PYTHONPATH=. python3 scripts/move_root_jsons_to_output.py`.

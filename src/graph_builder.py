@@ -37,6 +37,9 @@ class ManualGraphBuilder:
         # Initialize schema inducer for hierarchical organization
         self.schema_inducer = SchemaInducer(llm=self.llm)
         
+        # Default output directory for JSON exports
+        self.output_dir = "data/output"
+        
         # Initialize Neo4j if credentials provided
         self.graph_db = None
         if all([neo4j_uri, neo4j_username, neo4j_password]):
@@ -71,6 +74,18 @@ class ManualGraphBuilder:
         # Collapse 3+ blank lines to a single blank line
         text = re.sub(r'\n{3,}', '\n\n', text)
         return text.strip()
+
+    def _ensure_output_dir(self) -> None:
+        os.makedirs(self.output_dir, exist_ok=True)
+
+    def _resolve_output_path(self, filename_or_path: str) -> str:
+        if os.path.isabs(filename_or_path) or os.path.dirname(filename_or_path):
+            out_dir = os.path.dirname(filename_or_path)
+            if out_dir:
+                os.makedirs(out_dir, exist_ok=True)
+            return filename_or_path
+        self._ensure_output_dir()
+        return os.path.join(self.output_dir, filename_or_path)
     
     def extract_graph_from_chunks(self, chunks: List[str], save_every: int = 100, start_chunk: int = 0) -> List[EECGraphDocument]:
         """Extract EEC graph documents from text chunks with periodic saving
@@ -180,10 +195,10 @@ class ManualGraphBuilder:
     def _save_progress(self, graph_docs: List[Any], processed: int, total: int, final: bool = False):
         """Save progress to JSON file"""
         if final:
-            filename = "e80_knowledge_graph_final.json"
+            filename = self._resolve_output_path("e80_knowledge_graph_final.json")
             print(f"💾 Saving final results to {filename}")
         else:
-            filename = f"e80_knowledge_graph_progress_{processed}of{total}.json"
+            filename = self._resolve_output_path(f"e80_knowledge_graph_progress_{processed}of{total}.json")
             print(f"💾 Saving progress: {processed}/{total} chunks to {filename}")
         
         try:
@@ -318,10 +333,10 @@ class ManualGraphBuilder:
     def _save_eec_progress(self, eec_docs: List[EECGraphDocument], processed: int, total: int, final: bool = False):
         """Save EEC progress to JSON file"""
         if final:
-            filename = "e80_eec_knowledge_graph_final.json"
+            filename = self._resolve_output_path("e80_eec_knowledge_graph_final.json")
             print(f"💾 Saving final EEC results to {filename}")
         else:
-            filename = f"e80_eec_knowledge_graph_progress_{processed}of{total}.json"
+            filename = self._resolve_output_path(f"e80_eec_knowledge_graph_progress_{processed}of{total}.json")
             print(f"💾 Saving EEC progress: {processed}/{total} chunks to {filename}")
         
         try:
@@ -353,6 +368,7 @@ class ManualGraphBuilder:
     
     def export_eec_json(self, eec_docs: List[EECGraphDocument], output_path: str):
         """Export EEC data to JSON format"""
+        output_path = self._resolve_output_path(output_path)
         export_data = {
             "entities": [],
             "events": [],
@@ -421,8 +437,10 @@ class ManualGraphBuilder:
         schemas = self.schema_inducer.induce_schemas(eec_docs)
         
         # Export temporal patterns and schemas
-        self.temporal_extractor.export_temporal_patterns(temporal_patterns, "e80_temporal_patterns.json")
-        self.schema_inducer.export_schemas(schemas, "e80_schemas.json")
+        temporal_path = self._resolve_output_path("e80_temporal_patterns.json")
+        schema_path = self._resolve_output_path("e80_schemas.json")
+        self.temporal_extractor.export_temporal_patterns(temporal_patterns, temporal_path)
+        self.schema_inducer.export_schemas(schemas, schema_path)
         
         return {
             "temporal_patterns": temporal_patterns,
@@ -509,6 +527,7 @@ class ManualGraphBuilder:
     
     def export_graph_json(self, graph_docs: List[Any], output_path: str):
         """Export graph data to JSON format"""
+        output_path = self._resolve_output_path(output_path)
         export_data = {
             "nodes": [],
             "relationships": []

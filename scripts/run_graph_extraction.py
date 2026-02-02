@@ -88,12 +88,14 @@ def main():
         
         # Export to JSON
         if result['eec_documents']:
-            output_path = "e80_eec_knowledge_graph.json"
+            output_path = os.path.join(builder.output_dir, "e80_eec_knowledge_graph.json")
             builder.export_eec_json(result['eec_documents'], output_path)
             print(f"📄 EEC graph exported to: {output_path}")
             if args.with_temporal_schema:
-                print(f"📄 Temporal patterns exported to: e80_temporal_patterns.json")
-                print(f"📄 Schemas exported to: e80_schemas.json")
+                temporal_path = os.path.join(builder.output_dir, "e80_temporal_patterns.json")
+                schema_path = os.path.join(builder.output_dir, "e80_schemas.json")
+                print(f"📄 Temporal patterns exported to: {temporal_path}")
+                print(f"📄 Schemas exported to: {schema_path}")
         
     except Exception as e:
         print(f"❌ Error during processing: {e}")

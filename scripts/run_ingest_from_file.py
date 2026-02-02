@@ -72,7 +72,7 @@ def main():
 
         # Export EEC JSON snapshot
         if result['eec_documents']:
-            output_path = "e80_eec_knowledge_graph.json"
+            output_path = os.path.join(builder.output_dir, "e80_eec_knowledge_graph.json")
             builder.export_eec_json(result['eec_documents'], output_path)
             print(f"📄 EEC graph exported to: {output_path}")
 

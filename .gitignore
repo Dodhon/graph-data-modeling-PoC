@@ -1,4 +1,7 @@
-/data
+/data/*
+!/data/README.md
+!/data/output/
+!/data/output/.gitkeep
 /src/__pycache__
 .env
 *.json
