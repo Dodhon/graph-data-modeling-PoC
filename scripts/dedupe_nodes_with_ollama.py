@@ -32,9 +32,9 @@ CROSS_TYPE_EXACT_MATCH = True
 ALLOW_CROSS_TYPE_MERGE = False
 CONFIDENCE_THRESHOLD = 0.85
 
-CHECKPOINT_EVERY = 100
+CHECKPOINT_EVERY = 1
 RESUME_FROM = ""  # Path to a checkpoint.json to resume from
-PROGRESS_EVERY = 20
+PROGRESS_EVERY = 1
 
 PREFIX_LEN = 4
 MIN_NAME_LEN = 4
@@ -44,6 +44,8 @@ MAX_TOTAL_CANDIDATES = 8000
 
 DRY_RUN = False
 RETRY_COUNT = 1
+LOG_EACH_CALL = True
+LOG_SAMPLE_EVERY = 1  # keep at 1 for full verbosity
 # ---------------------------------
 
 LABEL_GROUPS = {"Entity", "Event", "Concept"}
@@ -446,10 +448,24 @@ def main() -> None:
         if DRY_RUN:
             result = {"same": False, "confidence": 0, "canonical_name": "", "reason": "dry_run"}
         else:
+            if LOG_EACH_CALL and (evaluated % LOG_SAMPLE_EVERY == 0):
+                print(
+                    f"🧠 [{evaluated + 1}/{total_remaining}] Calling Ollama "
+                    f"({node_a['id']} ↔ {node_b['id']})"
+                )
+            call_start = time.perf_counter()
             try:
                 result = _evaluate_with_ollama(node_a, node_b)
             except RuntimeError as exc:
                 error_message = str(exc)
+            call_elapsed = time.perf_counter() - call_start
+            if LOG_EACH_CALL and (evaluated % LOG_SAMPLE_EVERY == 0):
+                status = "ok" if error_message is None else "error"
+                confidence = None if not result else result.get("confidence")
+                print(
+                    f"✅ [{evaluated + 1}/{total_remaining}] Ollama {status} "
+                    f"in {call_elapsed:.2f}s (conf={confidence})"
+                )
 
         reviewed_item = {
             "node_a": node_a["id"],
