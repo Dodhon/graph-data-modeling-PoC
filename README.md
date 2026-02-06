@@ -63,6 +63,24 @@ PYTHONPATH=. python3 scripts/run_ingest_from_file.py \
   --save-every 1
 ```
 
+## Stakeholder Data Cleaning + Extraction
+
+Clean noisy stakeholder files before extraction:
+
+```bash
+python3 scripts/clean_stakeholder_data.py
+```
+
+This writes cleaned artifacts to `data/stakeholder/cleaned/` and a summary report to
+`data/stakeholder/cleaned/clean_report.json`.
+
+Run stakeholder extraction (defaults to `data/stakeholder/cleaned/` when present):
+
+```bash
+python3 scripts/run_stakeholder_extraction.py --dry-run
+python3 scripts/run_stakeholder_extraction.py
+```
+
 ### Convert a PDF to TXT first (if needed)
 
 ```bash
