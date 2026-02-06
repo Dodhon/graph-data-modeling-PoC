@@ -81,6 +81,11 @@ python3 scripts/run_stakeholder_extraction.py --dry-run
 python3 scripts/run_stakeholder_extraction.py
 ```
 
+Extraction now:
+- Processes the selected stakeholder CSV before markdown to seed canonical entities.
+- Canonicalizes/merges nodes incrementally during extraction.
+- Runs a final reconciliation pass and writes `canonicalization_report.json` in the output folder.
+
 ### Convert a PDF to TXT first (if needed)
 
 ```bash
