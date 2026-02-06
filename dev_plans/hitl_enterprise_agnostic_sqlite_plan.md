@@ -57,6 +57,27 @@ Why this is the best fit:
 - First terminal decision wins for a case; later terminal attempts return existing terminal decision.
 - Corrections/supersedes are append-only events; no in-place mutation of prior decision events.
 
+## State Transition Matrix
+
+Allowed transitions:
+- `pending` -> `needs_clarification` via `request_clarification`
+- `pending` -> `approved` via `record_decision(decision=approved)`
+- `pending` -> `rejected` via `record_decision(decision=rejected)`
+- `needs_clarification` -> `pending` via `provide_clarification`
+- `needs_clarification` -> `approved` via `record_decision(decision=approved)`
+- `needs_clarification` -> `rejected` via `record_decision(decision=rejected)`
+
+Disallowed transitions:
+- `approved` -> any other state (except explicit superseding event policy in a future phase)
+- `rejected` -> any other state (except explicit superseding event policy in a future phase)
+- `pending` -> `pending` with no new event (no-op writes disallowed)
+- `needs_clarification` -> `needs_clarification` without a new follow-up question revision event
+
+Invalid transition behavior:
+- Return `{status:"error", code:"INVALID_STATE_TRANSITION", from_state:"...", requested_action:"..."}`.
+- Do not write to `hitl_events`.
+- Do not mutate `hitl_state`.
+
 ## Architecture
 
 ### Core model
@@ -179,6 +200,25 @@ Indexes:
 - `ref_value TEXT NOT NULL`
 - PK `(case_id, ref_type, ref_key, ref_value)`
 
+## Database Constraints (DDL-level)
+- Enforce enums with `CHECK` constraints:
+  - `hitl_state.current_state IN ('pending','needs_clarification','approved','rejected')`
+  - `hitl_events.event_type IN ('submitted','needs_clarification','clarification_provided','decision_recorded','decision_superseded')`
+  - `hitl_events.decision_outcome IS NULL OR hitl_events.decision_outcome IN ('approved','rejected')`
+- Enforce conditional field requirements using `CHECK`:
+  - `event_type='needs_clarification'` requires non-empty `question`
+  - `event_type='clarification_provided'` requires non-empty `answer`
+  - `event_type='decision_recorded'` requires non-null `decision_outcome`
+- Add `UNIQUE(case_id, request_id)` where `request_id` is not null to guarantee idempotency per case.
+- Add FK constraints:
+  - `hitl_events.case_id -> hitl_cases.case_id`
+  - `hitl_state.case_id -> hitl_cases.case_id`
+  - `hitl_events.supersedes_event_id -> hitl_events.event_id` (nullable)
+- Add `ON DELETE RESTRICT` on core FKs to preserve audit history.
+- Add uniqueness for first terminal decision:
+  - Either partial unique index on terminal events per case (preferred), or transactional guard with explicit lock/read-check-write sequence.
+- Keep `event_json` and `payload_json` canonical but validate size limits before insert.
+
 ## Minimum Query Requirements
 1. List pending cases (latest N).
 2. Get case by `case_id`.
@@ -221,11 +261,34 @@ Admin (optional for v1.1):
 8. Use append-only events; never rewrite history.
 9. Keep state projection derived from events in the same transaction.
 
+## Idempotency Contract
+- `request_id` is required for all mutating MCP tool calls (`submit_case`, `request_clarification`, `provide_clarification`, `record_decision`).
+- Scope: uniqueness is `(case_id, request_id)` for case-scoped events, and global uniqueness for `submit_case` when no `case_id` exists yet.
+- Retry behavior:
+  - If a duplicate `request_id` is received with identical payload intent, return previous success payload.
+  - If a duplicate `request_id` is received with conflicting payload intent, return `{status:"error", code:"IDEMPOTENCY_CONFLICT"}`.
+- Retention:
+  - Keep idempotency keys for at least the maximum retry window (recommended 30 days).
+  - Do not purge idempotency records needed for legal/audit obligations.
+
 ## Schema Evolution Strategy
 - Every case/event stores `schema_version` (directly or through canonical envelope).
 - Prefer read-time upcasting for older records.
 - Use write-time migrations only for index/performance/storage changes.
 - Keep canonical schema definitions in one module and generate prompt-safe excerpts from it.
+
+## Adapter Schema Versioning Contract
+- `hitl_schema_registry` supports one active schema version per `adapter_id` (`is_active=1`).
+- New submissions validate against the currently active adapter schema.
+- Historical records remain bound to their persisted schema version and are read through upcasting.
+- Compatibility requirements for adapter upgrades:
+  - Backward-compatible additions (new optional fields) can activate without migration.
+  - Breaking changes require either:
+    - upcaster support from older versions, or
+    - explicit migration plan with verification.
+- In-flight cases:
+  - cases in `pending|needs_clarification` must remain processable even if adapter schema version changes.
+  - do not invalidate or discard in-flight records due to adapter upgrades.
 
 ## Path and Runtime Assumptions
 - `REPO_ROOT` derived from server location (`Path(__file__).resolve().parents[2]` if under `mcp/.../server.py`).
@@ -243,11 +306,31 @@ Admin (optional for v1.1):
 - Clarification answer missing: `{status:"error", code:"ANSWER_REQUIRED"}`.
 - Invalid transition: `{status:"error", code:"INVALID_STATE_TRANSITION"}`.
 
+## Projection Authority and Rebuild
+- Source of truth: `hitl_events` is authoritative.
+- `hitl_state` is a derived projection used for queue/read performance.
+- Write rule: event append + state projection update must happen in the same transaction.
+- Rebuild rule:
+  - provide a deterministic rebuild command that truncates/recomputes `hitl_state` from ordered `hitl_events`.
+  - rebuild is required after corruption recovery or projection drift detection.
+- Drift detection:
+  - periodic check compares recomputed projection hash vs live projection hash.
+  - mismatch emits alert and recommends controlled rebuild.
+
 ## Follow-up and Escalation Policy (MVP)
 - `needs_clarification` is non-terminal and remains queue-visible.
 - `provide_clarification` returns case to `pending`.
 - If state remains `needs_clarification` past SLA (example 30 days), mark escalation fields in `hitl_state` and notify escalation target.
 - Escalation policy is configurable per adapter/team.
+
+Detailed SLA guidance:
+- Default SLA clock uses calendar days unless adapter policy overrides to business days.
+- `needs_clarification_since_ms` starts at first transition into `needs_clarification`.
+- `escalation_due_at_ms` is computed from adapter/team policy.
+- Re-escalation policy:
+  - if unresolved after first escalation, repeat notifications at configured interval.
+  - optional reassignment to higher support tier after configured threshold.
+- Escalation side effects must be explicit events (for auditability), not silent state edits.
 
 ## LGV PoC Integration Strategy
 1. Keep `prompts/neo4j_chatbot_prompt_v2.txt` behavior intact (read-only Neo4j).
@@ -256,6 +339,29 @@ Admin (optional for v1.1):
 4. Define adapter `lgv_troubleshooting` payload schema:
    - symptom, site, lgv_id, services_checked, connection_path, evidence, missing_data, proposed_next_action.
 5. Do not store raw Cypher or full transcripts by default; store summarized evidence + refs.
+
+## Identity and Trust Boundary
+- `actor_name` and `actor_role` are human-readable display fields.
+- Security identity must be server-derived principal identity (phase 3), not trusted from caller-provided display strings.
+- Persist both when available:
+  - `actor_id` as authoritative principal id for authorization/audit.
+  - `actor_name`/`actor_role` for operator usability.
+- Until full auth is in place, mark identity assurance level in logs/metrics to avoid false trust assumptions.
+
+## Data Governance and Retention
+- Data minimization:
+  - store only required workflow evidence; avoid full transcripts and unnecessary sensitive data.
+- Redaction:
+  - redact sensitive identifiers in `notes`, `payload_json`, and `event_json` when possible at ingestion.
+- Retention baseline (adjust per policy):
+  - keep event/audit records for defined compliance window.
+  - archive or purge non-essential payload fields after retention threshold.
+- Access controls:
+  - restrict read access to sensitive payload/notes by role.
+  - expose least-privilege queue summaries for general reviewers.
+- Exports:
+  - include deterministic manifests and checksums.
+  - support policy-compliant deletion/redaction workflows without breaking audit traceability.
 
 ## Rollout Phases
 
