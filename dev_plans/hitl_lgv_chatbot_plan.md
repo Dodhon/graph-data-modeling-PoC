@@ -1,5 +1,7 @@
 # Plan: HITL Workflow for LGV Neo4j Troubleshooting Chatbot
 
+Companion plan for enterprise-agnostic core: `dev_plans/hitl_enterprise_agnostic_sqlite_plan.md`.
+
 ## End User Context
 - Primary user: non-technical customer reporting LGV (Laser Guided Vehicle) issues.
 - Secondary user: operations/reliability operator reviewing uncertain or high-impact recommendations.
